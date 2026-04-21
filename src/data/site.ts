@@ -11,10 +11,10 @@ export const siteConfig = {
     short:
       "Amy Cuddy is a social psychologist, bestselling author, and award-winning Harvard Business School professor whose research on body language, power, and presence has transformed how people understand themselves and how they show up in the world.",
     medium:
-      "Amy Cuddy is a social psychologist, bestselling author, and award-winning Harvard Business School professor (on leave) best known for her research on body language, power dynamics, and the science of presence. Her 2012 TED Talk — the second most-viewed TED Talk of all time with over 70 million views — introduced millions to the concept of \"power posing\" and the idea that our bodies shape our minds as much as our minds shape our bodies.",
+      "Amy Cuddy is a social psychologist, bestselling author, and award-winning Harvard Business School professor (on leave) best known for her research on body language, power dynamics, and the science of presence. Her 2012 TED Talk — the third most-watched TED Talk of all time with over 70 million views — introduced millions to the concept of \"power posing\" and the idea that our bodies shape our minds as much as our minds shape our bodies.",
     long: `Amy Cuddy is a social psychologist, bestselling author, and award-winning Harvard Business School professor (on leave) whose groundbreaking research on body language, power, and presence has fundamentally changed how people think about confidence, leadership, and human connection.
 
-Her 2012 TED Talk, "Your Body Language May Shape Who You Are," became the second most-watched TED Talk in history, with over 70 million views across platforms. In it, she introduced the concept of "power posing" — the idea that adopting expansive, open postures can meaningfully shift how we feel about ourselves and how we perform under pressure.
+Her 2012 TED Talk, "Your Body Language May Shape Who You Are," became the third most-watched TED Talk in history, with over 70 million views across platforms. In it, she introduced the concept of "power posing" — the idea that adopting expansive, open postures can meaningfully shift how we feel about ourselves and how we perform under pressure.
 
 Amy's research spans nonverbal behavior, power and dominance, prejudice and stereotyping, and the psychological and physiological effects of social environments. She has published extensively in top academic journals, and her work has been featured in The New York Times, The Wall Street Journal, The Economist, Forbes, TIME, and on NPR, CNN, and BBC.
 
@@ -33,7 +33,7 @@ Beyond her academic work, Amy has been a fierce advocate for people who have exp
     "Professor, Harvard Business School (on leave)",
     "Former Faculty, Northwestern University Kellogg School of Management",
     "Author, *Presence* (2015) — NYT Bestseller, 30+ languages",
-    "TED Talk: 2nd most-watched of all time (70M+ views)",
+    "TED Talk: 3rd most-watched of all time (70M+ views)",
   ],
 
   researchAreas: [
@@ -53,8 +53,8 @@ Beyond her academic work, Amy has been a fierce advocate for people who have exp
 
   social: {
     twitter: "https://twitter.com/amyjccuddy",
-    linkedin: "https://www.linkedin.com/in/amycuddy",
-    instagram: "https://www.instagram.com/amyjccuddy",
+    linkedin: "https://www.linkedin.com/in/amy-cuddy-3654034/",
+    instagram: "https://www.instagram.com/amycuddy/",
     tedTalk: "https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are",
   },
 

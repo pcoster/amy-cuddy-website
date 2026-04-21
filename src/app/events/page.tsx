@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { events } from "@/data/events";
 import EventCard from "@/components/EventCard";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -159,19 +160,7 @@ export default function EventsPage() {
           <p className="text-white/70 text-lg mb-8">
             Sign up to receive updates when new events are announced.
           </p>
-          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 px-4 py-3 rounded-md border border-white/20 bg-white/10 text-white placeholder-white/40 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 bg-gold text-[#0D0D0D] font-semibold text-sm rounded-md hover:bg-gold-light transition-colors whitespace-nowrap"
-            >
-              Get Alerts
-            </button>
-          </form>
+          <NewsletterForm dark />
         </div>
       </section>
     </>

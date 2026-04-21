@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { speakingTopics, audienceTypes, bookingProcess } from "@/data/speaking";
+import { speakingTopics, audienceTypes } from "@/data/speaking";
 import { testimonials } from "@/data/testimonials";
 import SpeakingTopic from "@/components/SpeakingTopic";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -57,6 +58,16 @@ export default function SpeakingPage() {
             </a>
           </div>
         </div>
+      </section>
+
+      {/* Photo strip */}
+      <section className="h-72 md:h-96 grid grid-cols-3 overflow-hidden">
+        {["/images/keynote-wobi-gesturing.jpeg", "/images/speaking-stage.jpeg", "/images/panel-speaking-2.jpeg"].map((src) => (
+          <div key={src} className="relative overflow-hidden">
+            <Image src={src} alt="Amy Cuddy speaking" fill className="object-cover object-top hover:scale-105 transition-transform duration-700" />
+            <div className="absolute inset-0 bg-navy/20" />
+          </div>
+        ))}
       </section>
 
       {/* Stats band */}
@@ -126,43 +137,6 @@ export default function SpeakingPage() {
                 <p className="text-text-secondary text-sm leading-relaxed">{audience.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Booking process */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-3">
-              Getting Started
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-4">
-              How to Book Amy
-            </h2>
-            <p className="text-text-secondary text-lg">
-              We make the process easy and collaborative from the first inquiry to the day of your event.
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Connecting line */}
-            <div className="absolute left-6 top-8 bottom-8 w-0.5 bg-gray-100 hidden md:block" />
-            <div className="space-y-8">
-              {bookingProcess.map((step) => (
-                <div key={step.step} className="flex gap-6 items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-navy flex items-center justify-center shadow-sm relative z-10">
-                    <span className="font-serif font-bold text-white">{step.step}</span>
-                  </div>
-                  <div className="flex-1 bg-background-alt rounded-xl p-6 border border-gray-100">
-                    <h3 className="font-serif font-bold text-text-primary text-lg mb-2">
-                      {step.title}
-                    </h3>
-                    <p className="text-text-secondary leading-relaxed">{step.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

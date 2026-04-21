@@ -46,7 +46,7 @@ export default function AboutPage() {
             <div className="lg:col-span-4">
               <div className="aspect-[3/4] bg-background-alt rounded-2xl mb-8 relative overflow-hidden">
                 <Image
-                  src="https://picsum.photos/seed/amycuddy-sidebar/480/640"
+                  src="/images/headshot.jpeg"
                   alt="Amy Cuddy"
                   fill
                   className="object-cover object-top"
@@ -204,17 +204,19 @@ export default function AboutPage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { seed: "ac-gallery-1", span: "col-span-2 row-span-2 aspect-square" },
-              { seed: "ac-gallery-2", span: "aspect-square" },
-              { seed: "ac-gallery-3", span: "aspect-square" },
-              { seed: "ac-gallery-4", span: "aspect-square" },
-            ].map(({ seed, span }) => (
-              <div key={seed} className={`relative bg-background-alt rounded-xl overflow-hidden ${span}`}>
+              { src: "/images/keynote-wobi-arms.jpeg", span: "col-span-2 row-span-2 aspect-square" },
+              { src: "/images/panel-conversation.jpeg", span: "aspect-square" },
+              { src: "/images/keynote-podium.jpeg", span: "aspect-square" },
+              { src: "/images/panel-smiling.jpeg", span: "aspect-square" },
+              { src: "/images/group-workshop.jpeg", span: "aspect-square" },
+              { src: "/images/keynote-pointing.jpeg", span: "aspect-square" },
+            ].map(({ src, span }) => (
+              <div key={src} className={`relative bg-background-alt rounded-xl overflow-hidden ${span}`}>
                 <Image
-                  src={`https://picsum.photos/seed/${seed}/600/600`}
+                  src={src}
                   alt="Amy Cuddy"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
             ))}

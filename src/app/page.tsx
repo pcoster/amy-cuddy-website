@@ -71,7 +71,7 @@ export default function HomePage() {
               <div className="mt-14 flex flex-wrap gap-x-10 gap-y-6">
                 {[
                   { value: "70M+", label: "TED Talk views" },
-                  { value: "2nd", label: "most-watched TED Talk" },
+                  { value: "3rd", label: "most-watched TED Talk" },
                   { value: "30+", label: "languages" },
                 ].map((stat) => (
                   <div key={stat.label}>
@@ -89,7 +89,7 @@ export default function HomePage() {
                 <div className="absolute -top-4 -left-4 w-full h-full border-2 border-gold/20 rounded-2xl" />
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="https://picsum.photos/seed/amycuddy-hero/840/1040"
+                    src="/images/headshot.jpeg"
                     alt="Amy Cuddy"
                     fill
                     className="object-cover object-top"
@@ -119,7 +119,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-[4/5] bg-background-alt rounded-2xl overflow-hidden relative">
                 <Image
-                  src="https://picsum.photos/seed/amycuddy-about/600/750"
+                  src="/images/keynote-wobi-smiling.jpeg"
                   alt="Amy Cuddy"
                   fill
                   className="object-cover object-top"

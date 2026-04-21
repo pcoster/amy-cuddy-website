@@ -6,7 +6,9 @@ const footerLinks = [
   { href: "/about", label: "About" },
   { href: "/speaking", label: "Speaking" },
   { href: "/books", label: "Books" },
+  { href: "/writing", label: "Writing" },
   { href: "/media", label: "Media" },
+  { href: "/research", label: "Research" },
   { href: "/events", label: "Events" },
   { href: "/contact", label: "Contact" },
 ];
@@ -149,6 +151,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+
       </div>
     </footer>
   );

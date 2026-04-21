@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { books } from "@/data/books";
+import { presenceEditions } from "@/data/editions";
 import BookCard from "@/components/BookCard";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Books",
@@ -81,6 +84,73 @@ export default function BooksPage() {
         </section>
       )}
 
+      {/* Stage photo — Presence translations */}
+      <section className="relative h-64 md:h-80 overflow-hidden">
+        <Image
+          src="/images/stage-presence-books.jpeg"
+          alt="Amy Cuddy on stage with Presence book translations"
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-navy/50" />
+        <div className="absolute inset-0 flex items-center justify-center text-center px-4">
+          <p className="font-serif text-white text-2xl md:text-3xl font-bold max-w-xl">
+            Published in 35 languages. More than 500,000 copies sold.
+          </p>
+        </div>
+      </section>
+
+      {/* International editions */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-3">Global Reach</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-text-primary">
+              Presence Around the World
+            </h2>
+            <p className="text-text-secondary mt-4 max-w-xl mx-auto">
+              Published in 35 languages — find your edition below.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            {presenceEditions.map((edition) => (
+              <a
+                key={edition.language}
+                href={edition.buyUrl ?? "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col bg-background-alt border border-gray-100 rounded-xl overflow-hidden hover:shadow-md hover:border-navy/20 transition-all duration-200"
+              >
+                {/* Cover or styled placeholder */}
+                <div className="relative aspect-[2/3] bg-navy overflow-hidden">
+                  {edition.cover ? (
+                    <Image src={edition.cover} alt={edition.localTitle} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-navy to-[#0d2347]">
+                      <span className="text-3xl mb-3">{edition.flag}</span>
+                      <p className="font-serif text-white text-sm font-bold leading-tight">{edition.localTitle}</p>
+                      <div className="w-6 h-px bg-gold/60 my-2" />
+                      <p className="text-white/50 text-xs">Amy Cuddy</p>
+                    </div>
+                  )}
+                </div>
+                {/* Language label */}
+                <div className="px-3 py-2.5 flex items-center justify-between gap-2">
+                  <div>
+                    <p className="text-xs font-semibold text-text-primary leading-tight">{edition.language}</p>
+                    {edition.cover && <p className="text-xs text-text-secondary truncate mt-0.5">{edition.localTitle}</p>}
+                  </div>
+                  {edition.buyUrl && (
+                    <span className="flex-shrink-0 text-xs text-navy font-semibold group-hover:underline">Buy →</span>
+                  )}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Quotes about the books */}
       <section className="py-24 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.04]">
@@ -116,20 +186,7 @@ export default function BooksPage() {
           <p className="text-text-secondary text-lg mb-10">
             Sign up to get updates on Amy&apos;s forthcoming book and other news.
           </p>
-          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 px-4 py-3 rounded-md border border-gray-200 text-text-primary placeholder-text-secondary/60 text-sm focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy/40 transition-colors"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 bg-gold text-[#0D0D0D] font-semibold text-sm rounded-md hover:bg-gold-light transition-colors whitespace-nowrap"
-            >
-              Notify Me
-            </button>
-          </form>
-          <p className="text-xs text-text-secondary/60 mt-3">No spam. Unsubscribe anytime.</p>
+          <NewsletterForm />
         </div>
       </section>
 

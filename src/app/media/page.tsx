@@ -88,7 +88,7 @@ export default function MediaPage() {
                   <div className="flex flex-wrap gap-4 mb-4">
                     {[
                       { value: "70M+", label: "Views" },
-                      { value: "#2", label: "Most-watched TED Talk" },
+                      { value: "#3", label: "Most-watched TED Talk" },
                       { value: "30+", label: "Languages subtitled" },
                     ].map((stat) => (
                       <div key={stat.label} className="bg-white rounded-lg px-4 py-2 border border-gray-100 shadow-sm">

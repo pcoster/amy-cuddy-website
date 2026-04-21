@@ -40,7 +40,7 @@ In *Presence*, Harvard Business School professor Amy Cuddy — whose TED Talk on
 Drawing on cutting-edge science, inspiring personal stories, and practical advice, Amy shows us that small tweaks — in how we stand, what we tell ourselves before a big meeting, the two-minute routine we adopt before walking into a nerve-racking situation — can liberate us to perform at our best when it matters most.
 
 *Presence* is not about behaving in a way that's calculated to impress others. It's about stepping into our fullest, most authentic selves, even in the moments when we feel least capable of doing so.`,
-    cover: "/images/books/presence-cover.jpg",
+    cover: "/images/presence-cover.jpg",
     coverAlt: "Presence by Amy Cuddy — book cover",
     publishYear: 2015,
     publisher: "Little, Brown and Company",

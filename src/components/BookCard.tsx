@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Book } from "@/data/books";
 
@@ -17,16 +18,20 @@ export default function BookCard({ book, variant = "card", reversed = false }: B
       >
         {/* Book cover */}
         <div className="flex-shrink-0 w-48 md:w-56 lg:w-64">
-          <div className="relative w-full aspect-[2/3] bg-gradient-to-br from-navy to-navy-dark rounded-lg shadow-2xl flex items-end justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
-            <div className="relative p-6 text-center">
-              <p className="font-serif text-white font-bold text-xl leading-tight mb-1">
-                {book.title}
-              </p>
-              <p className="text-white/60 text-xs">{book.subtitle}</p>
-              <div className="mt-4 w-8 h-0.5 bg-gold mx-auto" />
-              <p className="mt-2 text-white/40 text-xs">Amy Cuddy</p>
-            </div>
+          <div className="relative w-full aspect-[2/3] rounded-lg shadow-2xl overflow-hidden">
+            {book.cover ? (
+              <Image src={book.cover} alt={book.title} fill className="object-cover" />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-navy to-navy-dark flex items-end justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
+                <div className="relative p-6 text-center">
+                  <p className="font-serif text-white font-bold text-xl leading-tight mb-1">{book.title}</p>
+                  <p className="text-white/60 text-xs">{book.subtitle}</p>
+                  <div className="mt-4 w-8 h-0.5 bg-gold mx-auto" />
+                  <p className="mt-2 text-white/40 text-xs">Amy Cuddy</p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -113,14 +118,14 @@ export default function BookCard({ book, variant = "card", reversed = false }: B
   // Card variant
   return (
     <div className="group flex flex-col bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-      {/* Book cover placeholder */}
-      <div className="relative h-56 bg-gradient-to-br from-navy to-navy-dark flex items-end justify-center p-6">
-        <div className="text-center">
-          <p className="font-serif text-white font-bold text-xl leading-tight mb-1">
-            {book.title}
-          </p>
-          <div className="w-6 h-0.5 bg-gold mx-auto mt-3" />
-        </div>
+      <div className="relative h-56 bg-gradient-to-br from-navy to-navy-dark flex items-end justify-center p-6 overflow-hidden">
+        {book.cover && <Image src={book.cover} alt={book.title} fill className="object-cover" />}
+        {!book.cover && (
+          <div className="text-center">
+            <p className="font-serif text-white font-bold text-xl leading-tight mb-1">{book.title}</p>
+            <div className="w-6 h-0.5 bg-gold mx-auto mt-3" />
+          </div>
+        )}
         {book.status === "forthcoming" && (
           <div className="absolute top-4 right-4">
             <span className="text-xs font-semibold tracking-wide uppercase text-gold bg-[#0D0D0D]/60 backdrop-blur-sm px-2.5 py-1 rounded-full">

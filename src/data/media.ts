@@ -130,57 +130,121 @@ export const videoAppearances: VideoAppearance[] = [
   {
     id: "video-1",
     title: "Your Body Language May Shape Who You Are",
-    platform: "TED",
-    url: "https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are",
+    platform: "TED / YouTube",
+    url: "https://www.youtube.com/watch?v=Ks-_Mh1QhMc",
     description:
-      "The iconic TED Talk that sparked a global conversation about body language, power, and confidence. With over 70 million views, it's the 2nd most-watched TED Talk of all time.",
-    duration: "21:02",
+      "The iconic talk that sparked a global conversation about body language, power, and confidence. With over 70 million views, it's the 3rd most-watched TED Talk of all time.",
     date: "2012-10-01",
     featured: true,
   },
   {
     id: "video-2",
-    title: "Presence: How to Show Up in High-Stakes Moments",
-    platform: "Google Talks",
-    url: "https://youtube.com",
+    title: "Presence: Bringing Your Boldest Self to Your Biggest Challenges",
+    platform: "IDEAcademy",
+    url: "https://www.youtube.com/watch?v=ATo9sYax-AQ",
     description:
-      "Amy speaks at Google headquarters about the science of presence and how to bring your boldest self to your most challenging moments.",
-    duration: "58:30",
-    date: "2016-02-18",
+      "Based on her bestselling book, Amy explores how to approach high-pressure moments with sincerity and control rather than fear — and why presence is a skill, not a trait.",
+    date: "2018-01-01",
     featured: true,
   },
   {
     id: "video-3",
-    title: "The Science of Power Posing — An Update",
+    title: "Amy Cuddy with Susan Cain on Presence",
     platform: "YouTube",
-    url: "https://youtube.com",
+    url: "https://www.youtube.com/watch?v=AFllLB6yQrU",
     description:
-      "Amy revisits the power posing research, addressing the replication debate and presenting the cumulative evidence for embodied power.",
-    duration: "44:15",
-    date: "2022-05-10",
-    featured: false,
-  },
-  {
-    id: "video-4",
-    title: "60 Minutes: The Body Language Expert",
-    platform: "CBS News",
-    url: "https://cbsnews.com",
-    description:
-      "A wide-ranging interview on Amy's research, her personal story of recovery from a traumatic brain injury, and the science of resilience.",
-    duration: "13:45",
-    date: "2016-01-24",
+      "Two of the most influential voices on introversion, confidence, and human potential in conversation — exploring how presence and quiet strength intersect.",
     featured: true,
   },
   {
-    id: "video-5",
-    title: "Imposter Syndrome and What to Do About It",
-    platform: "Big Think",
-    url: "https://bigthink.com",
+    id: "video-4",
+    title: "The Body Language Expert: 4 Tricks That Make People Respect You",
+    platform: "YouTube",
+    url: "https://www.youtube.com/watch?v=YEM3nWkB-EE",
     description:
-      "Amy breaks down the psychology of imposter syndrome — why it happens, who it affects most, and the evidence-based strategies that actually help.",
-    duration: "8:22",
-    date: "2021-09-05",
+      "Amy breaks down four practical, research-backed body language techniques — and the science behind why they change how others see you and how you see yourself.",
     featured: false,
+  },
+  {
+    id: "video-5",
+    title: "How Body Language Can Help You Master Confidence",
+    platform: "School of Greatness / Lewis Howes",
+    url: "https://www.youtube.com/watch?v=x2umED0ES3g",
+    description:
+      "A wide-ranging conversation with Lewis Howes on using body language to build genuine confidence — from everyday interactions to the highest-stakes moments of your life.",
+    featured: false,
+  },
+  {
+    id: "video-6",
+    title: "Amy Cuddy Helps Stephen Strike Some Power Poses",
+    platform: "The Late Show with Stephen Colbert",
+    url: "https://www.youtube.com/watch?v=Vg5KK2j1YcI",
+    description:
+      "A fun, accessible segment from The Late Show where Amy teaches Stephen Colbert about power posing — bringing her research to a mainstream audience with humour and warmth.",
+    featured: false,
+  },
+  {
+    id: "video-7",
+    title: "Building Confidence Through Body Language",
+    platform: "WOBI",
+    url: "https://www.youtube.com/watch?v=OV_YlHp1-Bg",
+    description:
+      "Amy's keynote at the World Business Forum, exploring how body language shapes confidence from the inside out — and the science behind why small physical changes produce real results.",
+    featured: true,
+  },
+  {
+    id: "video-8",
+    title: "Adobe & Women Leadership Summit",
+    platform: "Adobe",
+    url: "https://www.youtube.com/watch?v=m0w1lM4oMHI",
+    description:
+      "Amy speaks at Adobe's Women Leadership Summit on presence, power, and what it takes for women to show up fully in leadership roles.",
+    featured: false,
+  },
+  {
+    id: "video-9",
+    title: "Psychologist Reveals How to Develop Massive Confidence",
+    platform: "School of Greatness / Lewis Howes",
+    url: "https://www.youtube.com/watch?v=lsg7kCe4FTI",
+    description:
+      "An in-depth conversation on the psychology of confidence — what blocks it, how body language unlocks it, and the daily practices Amy uses herself.",
+    featured: false,
+  },
+  {
+    id: "video-10",
+    title: "The Power of Passion and Perseverance",
+    platform: "YouTube",
+    url: "https://www.youtube.com/watch?v=IGdKMNQrXmI",
+    description:
+      "Angela Duckworth and Amy Cuddy in conversation — two leading psychologists exploring grit, presence, and what it really takes to push through your biggest challenges.",
+    featured: false,
+  },
+  {
+    id: "video-11",
+    title: "The Power of Presence",
+    platform: "YouTube",
+    url: "https://www.youtube.com/watch?v=NN5Sc9fA7FE",
+    description:
+      "Amy Cuddy and master negotiator William Ury discuss the role of presence in high-stakes conversations — from boardrooms to peace negotiations.",
+    featured: false,
+  },
+  {
+    id: "video-12",
+    title: "New Work Summit — Amy Cuddy & Adam Grant",
+    platform: "The Atlantic",
+    url: "https://www.youtube.com/watch?v=B7zTv2drEpY",
+    description:
+      "Amy and Adam Grant share the stage at The Atlantic's New Work Summit to debate and explore the future of work, confidence, and what organisations owe their people.",
+    featured: false,
+  },
+  {
+    id: "video-13",
+    title: "Posture, Power & Presence",
+    platform: "YouTube",
+    url: "https://www.youtube.com/watch?v=DrLgYU1PM9c",
+    description:
+      "A rare three-way conversation with Adam Grant, Amy Cuddy, and Susan Cain — three of the most influential voices in psychology — on power, introversion, and showing up authentically.",
+    featured: true,
   },
 ];
 
@@ -250,5 +314,23 @@ export const podcastAppearances: PodcastAppearance[] = [
       "Amy shares her personal story of resilience and the practices she uses daily to maintain presence, confidence, and clarity under pressure.",
     date: "2023-05-15",
     duration: "1:02:10",
+  },
+  {
+    id: "pod-7",
+    show: "A Bit of Optimism",
+    episode: "Finding Your Tribe",
+    host: "Simon Sinek",
+    url: "https://www.youtube.com/watch?v=qasDjM7emFE",
+    description:
+      "Amy joins Simon Sinek to explore belonging, community, and the science of finding your people — and why feeling like you belong changes everything about how you show up.",
+  },
+  {
+    id: "pod-8",
+    show: "Simon Sinek Podcast",
+    episode: "Amy Cuddy and Simon Sinek",
+    host: "Simon Sinek",
+    url: "https://www.youtube.com/watch?v=Z30CDx4GuPw",
+    description:
+      "A wide-ranging conversation between two of the world's most-watched thinkers on leadership, purpose, and the surprisingly physical nature of confidence.",
   },
 ];
