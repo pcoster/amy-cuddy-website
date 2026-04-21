@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply text-text-primary bg-background;
+  }
+
+  /* Prose styling for long-form text */
+  .prose-amy p {
+    @apply text-text-secondary leading-relaxed mb-5;
+  }
+
+  .prose-amy strong {
+    @apply text-text-primary font-semibold;
+  }
+
+  .prose-amy em {
+    @apply italic;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
