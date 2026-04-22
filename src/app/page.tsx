@@ -232,7 +232,7 @@ export default function HomePage() {
           {/* YouTube thumbnail as background */}
           <div className="relative h-[420px] md:h-[560px] lg:h-[640px]">
             <Image
-              src="https://img.youtube.com/vi/Ks-_Mh1QhMc/maxresdefault.jpg"
+              src="/images/ted-talk-stage.jpg"
               alt="Amy Cuddy TED Talk — Your Body Language May Shape Who You Are"
               fill
               className="object-cover opacity-60 group-hover:opacity-50 transition-opacity duration-500"
