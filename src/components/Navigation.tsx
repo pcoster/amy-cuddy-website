@@ -12,19 +12,65 @@ const aboutLinks = [
   { href: "/research", label: "Research" },
 ];
 
-const topLinks = [
-  { href: "/media", label: "Media" },
+const topics = [
+  {
+    label: "Presence & Body Language",
+    description: "How posture, breath, and physical space shape the way we think, feel, and perform.",
+    links: [
+      { href: "/media", label: "Watch the TED Talk" },
+      { href: "/research", label: "Read the Research" },
+      { href: "/books", label: "Read Presence" },
+    ],
+  },
+  {
+    label: "Confidence Under Pressure",
+    description: "Why high-stakes moments activate impostor syndrome — and how to show up anyway.",
+    links: [
+      { href: "/books", label: "Read Presence" },
+      { href: "/speaking", label: "Book a Keynote" },
+      { href: "/writing", label: "Read Her Writing" },
+    ],
+  },
+  {
+    label: "Leadership & Trust",
+    description: "Warmth before authority. Twenty years of research on what makes people follow a leader.",
+    links: [
+      { href: "/research", label: "Research Overview" },
+      { href: "/speaking", label: "Speaking Topics" },
+      { href: "/writing", label: "Read Her Writing" },
+    ],
+  },
+  {
+    label: "Bullying & Social Bravery",
+    description: "Bullying doesn't stay in the schoolyard. It follows us into work and relationships for decades.",
+    links: [
+      { href: "/books", label: "Pre-order Bullied" },
+      { href: "/writing", label: "Read Her Writing" },
+      { href: "/research", label: "Research Overview" },
+    ],
+  },
 ];
 
+const topLinks = [{ href: "/media", label: "Media" }];
+
 const aboutPaths = aboutLinks.map((l) => l.href);
+const chevron = (
+  <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor">
+    <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+  </svg>
+);
 
 export default function Navigation() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [topicsOpen, setTopicsOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [mobileTopicsOpen, setMobileTopicsOpen] = useState(false);
+
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const topicsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -35,14 +81,13 @@ export default function Navigation() {
   useEffect(() => {
     setMobileOpen(false);
     setAboutOpen(false);
+    setTopicsOpen(false);
   }, [pathname]);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setAboutOpen(false);
-      }
+      if (aboutRef.current && !aboutRef.current.contains(e.target as Node)) setAboutOpen(false);
+      if (topicsRef.current && !topicsRef.current.contains(e.target as Node)) setTopicsOpen(false);
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -70,25 +115,18 @@ export default function Navigation() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
+
             {/* About dropdown */}
-            <div className="relative" ref={dropdownRef}>
+            <div className="relative" ref={aboutRef}>
               <button
-                onClick={() => setAboutOpen((o) => !o)}
+                onClick={() => { setAboutOpen((o) => !o); setTopicsOpen(false); }}
                 className={`flex items-center gap-1 px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-md ${
                   isAboutActive ? "text-navy" : "text-text-secondary hover:text-text-primary"
                 }`}
               >
                 About
-                <svg
-                  className={`w-3.5 h-3.5 transition-transform duration-200 ${aboutOpen ? "rotate-180" : ""}`}
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
-                </svg>
+                <span className={`transition-transform duration-200 ${aboutOpen ? "rotate-180" : ""}`}>{chevron}</span>
               </button>
-
-              {/* Dropdown panel */}
               <div
                 className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-2 transition-all duration-200 origin-top ${
                   aboutOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"
@@ -99,14 +137,55 @@ export default function Navigation() {
                     key={link.href}
                     href={link.href}
                     className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
-                      pathname === link.href
-                        ? "text-navy bg-blue-50"
-                        : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
+                      pathname === link.href ? "text-navy bg-blue-50" : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
                     }`}
                   >
                     {link.label}
                   </Link>
                 ))}
+              </div>
+            </div>
+
+            {/* Topics mega-menu */}
+            <div className="relative" ref={topicsRef}>
+              <button
+                onClick={() => { setTopicsOpen((o) => !o); setAboutOpen(false); }}
+                className={`flex items-center gap-1 px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-md ${
+                  topicsOpen ? "text-navy" : "text-text-secondary hover:text-text-primary"
+                }`}
+              >
+                Topics
+                <span className={`transition-transform duration-200 ${topicsOpen ? "rotate-180" : ""}`}>{chevron}</span>
+              </button>
+
+              {/* Mega panel — anchored to the right so it doesn't overflow */}
+              <div
+                className={`absolute top-full right-0 mt-2 w-[640px] bg-white rounded-2xl shadow-xl border border-gray-100 p-6 transition-all duration-200 origin-top-right ${
+                  topicsOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"
+                }`}
+              >
+                <p className="text-xs font-semibold tracking-[0.18em] uppercase text-text-secondary mb-5">
+                  Browse by topic
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {topics.map((topic) => (
+                    <div key={topic.label} className="rounded-xl border border-gray-100 bg-background-alt p-4 hover:border-gray-200 transition-colors">
+                      <p className="font-serif font-bold text-text-primary text-sm mb-1.5">{topic.label}</p>
+                      <p className="text-text-secondary text-xs leading-relaxed mb-3">{topic.description}</p>
+                      <div className="flex flex-col gap-1">
+                        {topic.links.map((l) => (
+                          <Link
+                            key={l.label}
+                            href={l.href}
+                            className="text-xs font-medium text-navy hover:underline"
+                          >
+                            {l.label} →
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -116,9 +195,7 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-md ${
-                  pathname === link.href
-                    ? "text-navy"
-                    : "text-text-secondary hover:text-text-primary"
+                  pathname === link.href ? "text-navy" : "text-text-secondary hover:text-text-primary"
                 }`}
               >
                 {link.label}
@@ -151,10 +228,11 @@ export default function Navigation() {
         {/* Mobile menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
-            mobileOpen ? "max-h-[500px] pb-6" : "max-h-0"
+            mobileOpen ? "max-h-[700px] pb-6" : "max-h-0"
           }`}
         >
           <div className="flex flex-col gap-1 pt-2 border-t border-gray-100">
+
             {/* About accordion */}
             <button
               onClick={() => setMobileAboutOpen((o) => !o)}
@@ -163,28 +241,48 @@ export default function Navigation() {
               }`}
             >
               About
-              <svg
-                className={`w-4 h-4 transition-transform duration-200 ${mobileAboutOpen ? "rotate-180" : ""}`}
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
-              </svg>
+              <span className={`transition-transform duration-200 ${mobileAboutOpen ? "rotate-180" : ""}`}>{chevron}</span>
             </button>
-
             <div className={`overflow-hidden transition-all duration-200 ${mobileAboutOpen ? "max-h-64" : "max-h-0"}`}>
               {aboutLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={`block pl-6 pr-3 py-2.5 text-sm font-medium transition-colors rounded-md ${
-                    pathname === link.href
-                      ? "text-navy bg-blue-50"
-                      : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
+                    pathname === link.href ? "text-navy bg-blue-50" : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
                   }`}
                 >
                   {link.label}
                 </Link>
+              ))}
+            </div>
+
+            {/* Topics accordion */}
+            <button
+              onClick={() => setMobileTopicsOpen((o) => !o)}
+              className={`flex items-center justify-between px-3 py-3 text-base font-medium transition-colors rounded-md w-full text-left ${
+                mobileTopicsOpen ? "text-navy" : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
+              }`}
+            >
+              Topics
+              <span className={`transition-transform duration-200 ${mobileTopicsOpen ? "rotate-180" : ""}`}>{chevron}</span>
+            </button>
+            <div className={`overflow-hidden transition-all duration-200 ${mobileTopicsOpen ? "max-h-[500px]" : "max-h-0"}`}>
+              {topics.map((topic) => (
+                <div key={topic.label} className="pl-5 pr-3 py-2 border-b border-gray-50 last:border-0">
+                  <p className="text-sm font-semibold text-text-primary mb-1">{topic.label}</p>
+                  <div className="flex flex-col gap-0.5">
+                    {topic.links.map((l) => (
+                      <Link
+                        key={l.label}
+                        href={l.href}
+                        className="text-xs font-medium text-navy py-0.5"
+                      >
+                        {l.label} →
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
 
@@ -193,9 +291,7 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`px-3 py-3 text-base font-medium transition-colors rounded-md ${
-                  pathname === link.href
-                    ? "text-navy bg-blue-50"
-                    : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
+                  pathname === link.href ? "text-navy bg-blue-50" : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
                 }`}
               >
                 {link.label}
