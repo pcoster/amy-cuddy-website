@@ -51,15 +51,7 @@ export default function ResearchPage() {
             plain-English guide to her published work — what she studied, what she found,
             and why it matters.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://scholar.google.com/citations?user=1kdjewoAAAAJ&hl=en&oi=ao"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors"
-            >
-              View on Google Scholar
-            </a>
+          <div className="flex justify-center">
             <Link
               href="#themes"
               className="px-8 py-4 border border-white/30 text-white font-semibold rounded-md hover:bg-white/10 transition-colors"
