@@ -33,7 +33,6 @@ const chevron = (
 
 export default function Navigation() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [topicsOpen, setTopicsOpen] = useState(false);
@@ -42,12 +41,6 @@ export default function Navigation() {
 
   const aboutRef = useRef<HTMLDivElement>(null);
   const topicsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -67,13 +60,7 @@ export default function Navigation() {
   const isAboutActive = aboutPaths.includes(pathname);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
