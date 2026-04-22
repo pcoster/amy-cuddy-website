@@ -53,7 +53,7 @@ export default function ResearchPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://scholar.google.com/citations?user=P3jHKCMAAAAJ"
+              href="https://scholar.google.com/citations?user=1kdjewoAAAAJ&hl=en&oi=ao"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors"
@@ -231,7 +231,7 @@ export default function ResearchPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://scholar.google.com/citations?user=P3jHKCMAAAAJ"
+              href="https://scholar.google.com/citations?user=1kdjewoAAAAJ&hl=en&oi=ao"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors"
