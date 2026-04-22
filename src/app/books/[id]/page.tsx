@@ -253,49 +253,48 @@ export default async function BookPage({
       {/* ── INTERNATIONAL EDITIONS (Presence only) ── */}
       {isPresence && (
         <section className="py-24 bg-background-alt">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-14">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-10">
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-3">
                 Global Reach
               </p>
               <h2 className="font-serif text-4xl font-bold text-text-primary">
                 Presence Around the World
               </h2>
-              <p className="text-text-secondary mt-3 max-w-xl">
+              <p className="text-text-secondary mt-3">
                 Published in 35 languages — find your edition below.
               </p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            <div className="divide-y divide-gray-200 border-t border-gray-200">
               {presenceEditions.map((edition) => (
-                <a
-                  key={edition.language}
-                  href={edition.buyUrl ?? "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex flex-col bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-md hover:border-navy/20 transition-all duration-200"
-                >
-                  <div className="relative aspect-[2/3] bg-navy overflow-hidden">
-                    {edition.cover ? (
-                      <Image src={edition.cover} alt={edition.localTitle} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
-                    ) : (
-                      <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-navy to-[#0d2347]">
-                        <span className="text-3xl mb-3">{edition.flag}</span>
-                        <p className="font-serif text-white text-sm font-bold leading-tight">{edition.localTitle}</p>
-                        <div className="w-6 h-px bg-gold/60 my-2" />
-                        <p className="text-white/50 text-xs">Amy Cuddy</p>
-                      </div>
-                    )}
-                  </div>
-                  <div className="px-3 py-2.5 flex items-center justify-between gap-2">
-                    <div>
-                      <p className="text-xs font-semibold text-text-primary leading-tight">{edition.language}</p>
-                      {edition.cover && <p className="text-xs text-text-secondary truncate mt-0.5">{edition.localTitle}</p>}
+                <div key={edition.language} className="flex items-center justify-between py-3.5 gap-4 group">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <span className="text-xl flex-shrink-0">{edition.flag}</span>
+                    <div className="min-w-0">
+                      <span className="font-medium text-text-primary text-sm">{edition.language}</span>
+                      {edition.localTitle !== "Presence" && (
+                        <span className="text-text-secondary text-sm ml-2 italic truncate">— {edition.localTitle}</span>
+                      )}
                     </div>
-                    {edition.buyUrl && (
-                      <span className="flex-shrink-0 text-xs text-navy font-semibold group-hover:underline">Buy →</span>
+                  </div>
+                  <div className="flex items-center gap-4 flex-shrink-0">
+                    {edition.publisher && (
+                      <span className="text-text-secondary text-xs hidden sm:block">{edition.publisher}</span>
+                    )}
+                    {edition.buyUrl ? (
+                      <a
+                        href={edition.buyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-semibold text-navy hover:underline"
+                      >
+                        Buy →
+                      </a>
+                    ) : (
+                      <span className="text-xs text-text-secondary/50">Coming soon</span>
                     )}
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           </div>
