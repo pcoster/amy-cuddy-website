@@ -21,7 +21,7 @@ const topicLinks = [
   { href: "/topics/bullying-social-bravery", label: "Bullying & Social Bravery" },
 ];
 
-const topLinks = [{ href: "/media", label: "Media" }];
+const topLinks: { href: string; label: string }[] = [];
 
 const aboutPaths = aboutLinks.map((l) => l.href);
 const aboutTopLevelPaths = aboutLinks.filter((l) => !l.indent).map((l) => l.href);

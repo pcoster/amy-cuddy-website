@@ -7,7 +7,6 @@ const footerLinks = [
   { href: "/speaking", label: "Speaking" },
   { href: "/books", label: "Books" },
   { href: "/writing", label: "Writing" },
-  { href: "/media", label: "Media" },
   { href: "/research", label: "Research" },
 ];
 

@@ -144,6 +144,41 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── PRESS STRIP ── */}
+      <section className="py-10 bg-background-alt border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs font-semibold tracking-[0.2em] uppercase text-text-secondary mb-8">
+            As seen in
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                source: "TIME",
+                quote: "Game Changer — using a few simple tweaks to body language, Amy Cuddy discovers ways to help people become more powerful.",
+              },
+              {
+                source: "New York Times",
+                quote: "Truly powerful. Presence feels at once concrete and inspiring, simple but ambitious.",
+              },
+              {
+                source: "BBC",
+                quote: "Named to BBC 100 Women — one of the most inspiring and influential women in the world.",
+              },
+            ].map(({ source, quote }) => (
+              <div key={source} className="bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
+                <p className="text-xs font-bold tracking-widest uppercase text-navy mb-3">{source}</p>
+                <p className="text-text-secondary text-sm leading-relaxed italic">&ldquo;{quote}&rdquo;</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-3 mt-8">
+            {["Forbes", "Harvard Business Review", "Washington Post", "The Economist", "NPR", "The Guardian", "Fast Company", "Wall Street Journal"].map((pub) => (
+              <span key={pub} className="text-text-secondary/40 text-sm font-semibold tracking-wide">{pub}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── ABOUT SNIPPET ── */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
