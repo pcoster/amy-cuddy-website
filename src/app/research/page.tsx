@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { papers, researchThemes, type ResearchTheme } from "@/data/research";
 
 export const metadata: Metadata = {
@@ -51,14 +50,6 @@ export default function ResearchPage() {
             plain-English guide to her published work — what she studied, what she found,
             and why it matters.
           </p>
-          <div className="flex justify-center">
-            <Link
-              href="#themes"
-              className="px-8 py-4 border border-white/30 text-white font-semibold rounded-md hover:bg-white/10 transition-colors"
-            >
-              Browse by Theme
-            </Link>
-          </div>
         </div>
 
         {/* Stats */}
