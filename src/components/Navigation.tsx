@@ -158,34 +158,20 @@ export default function Navigation() {
                 <span className={`transition-transform duration-200 ${topicsOpen ? "rotate-180" : ""}`}>{chevron}</span>
               </button>
 
-              {/* Mega panel — anchored to the right so it doesn't overflow */}
               <div
-                className={`absolute top-full right-0 mt-2 w-[640px] bg-white rounded-2xl shadow-xl border border-gray-100 p-6 transition-all duration-200 origin-top-right ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 transition-all duration-200 origin-top ${
                   topicsOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"
                 }`}
               >
-                <p className="text-xs font-semibold tracking-[0.18em] uppercase text-text-secondary mb-5">
-                  Browse by topic
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {topics.map((topic) => (
-                    <div key={topic.label} className="rounded-xl border border-gray-100 bg-background-alt p-4 hover:border-gray-200 transition-colors">
-                      <p className="font-serif font-bold text-text-primary text-sm mb-1.5">{topic.label}</p>
-                      <p className="text-text-secondary text-xs leading-relaxed mb-3">{topic.description}</p>
-                      <div className="flex flex-col gap-1">
-                        {topic.links.map((l) => (
-                          <Link
-                            key={l.label}
-                            href={l.href}
-                            className="text-xs font-medium text-navy hover:underline"
-                          >
-                            {l.label} →
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                {topics.map((topic) => (
+                  <Link
+                    key={topic.label}
+                    href={topic.links[0].href}
+                    className="block px-4 py-2.5 text-sm font-medium transition-colors text-text-secondary hover:text-text-primary hover:bg-gray-50"
+                  >
+                    {topic.label}
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -267,22 +253,15 @@ export default function Navigation() {
               Topics
               <span className={`transition-transform duration-200 ${mobileTopicsOpen ? "rotate-180" : ""}`}>{chevron}</span>
             </button>
-            <div className={`overflow-hidden transition-all duration-200 ${mobileTopicsOpen ? "max-h-[500px]" : "max-h-0"}`}>
+            <div className={`overflow-hidden transition-all duration-200 ${mobileTopicsOpen ? "max-h-64" : "max-h-0"}`}>
               {topics.map((topic) => (
-                <div key={topic.label} className="pl-5 pr-3 py-2 border-b border-gray-50 last:border-0">
-                  <p className="text-sm font-semibold text-text-primary mb-1">{topic.label}</p>
-                  <div className="flex flex-col gap-0.5">
-                    {topic.links.map((l) => (
-                      <Link
-                        key={l.label}
-                        href={l.href}
-                        className="text-xs font-medium text-navy py-0.5"
-                      >
-                        {l.label} →
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+                <Link
+                  key={topic.label}
+                  href={topic.links[0].href}
+                  className="block pl-6 pr-3 py-2.5 text-sm font-medium transition-colors rounded-md text-text-secondary hover:text-text-primary hover:bg-gray-50"
+                >
+                  {topic.label}
+                </Link>
               ))}
             </div>
 
