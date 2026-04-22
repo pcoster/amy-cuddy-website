@@ -2,6 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
+import PhotoCarousel from "@/components/PhotoCarousel";
+
+const galleryPhotos = [
+  { src: "/images/keynote-wobi-arms.jpeg", alt: "Amy Cuddy on stage, arms raised" },
+  { src: "/images/panel-conversation.jpeg", alt: "Amy Cuddy in a panel conversation" },
+  { src: "/images/keynote-podium.jpeg", alt: "Amy Cuddy at the podium" },
+  { src: "/images/panel-smiling.jpeg", alt: "Amy Cuddy smiling on a panel" },
+  { src: "/images/group-workshop.jpeg", alt: "Amy Cuddy leading a group workshop" },
+  { src: "/images/keynote-pointing.jpeg", alt: "Amy Cuddy pointing during a keynote" },
+];
 
 export const metadata: Metadata = {
   title: "About Amy",
@@ -282,26 +292,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Photo grid */}
+      {/* Photo carousel */}
       <section className="py-24 bg-background-alt">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-10 text-center">
             In the Room
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { src: "/images/keynote-wobi-arms.jpeg", span: "col-span-2 row-span-2 aspect-square" },
-              { src: "/images/panel-conversation.jpeg", span: "aspect-square" },
-              { src: "/images/keynote-podium.jpeg", span: "aspect-square" },
-              { src: "/images/panel-smiling.jpeg", span: "aspect-square" },
-              { src: "/images/group-workshop.jpeg", span: "aspect-square" },
-              { src: "/images/keynote-pointing.jpeg", span: "aspect-square" },
-            ].map(({ src, span }) => (
-              <div key={src} className={`relative bg-gray-200 rounded-xl overflow-hidden ${span}`}>
-                <Image src={src} alt="Amy Cuddy" fill className="object-cover object-top" />
-              </div>
-            ))}
-          </div>
+          <PhotoCarousel photos={galleryPhotos} />
         </div>
       </section>
 
