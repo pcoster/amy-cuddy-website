@@ -50,7 +50,7 @@ Drawing on cutting-edge science, inspiring personal stories, and practical advic
     buyLinks: {
       amazon: "https://www.amazon.com/dp/0316256587",
       bookshop: "https://bookshop.org/p/books/presence-bringing-your-boldest-self-to-your-biggest-challenges-amy-cuddy/5a53c8620a02b9d0?ean=9780316256582&next=t",
-      barnesAndNoble: "https://www.barnesandnoble.com/w/presence-amy-cuddy/1120999941",
+      barnesAndNoble: "https://www.barnesandnoble.com/w/presence-amy-cuddy/1121319723?ean=9780316256582",
     },
     keyThemes: [
       "Power posing & body language",
