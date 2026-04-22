@@ -12,43 +12,11 @@ const aboutLinks = [
   { href: "/research", label: "Research" },
 ];
 
-const topics = [
-  {
-    label: "Presence & Body Language",
-    description: "How posture, breath, and physical space shape the way we think, feel, and perform.",
-    links: [
-      { href: "/media", label: "Watch the TED Talk" },
-      { href: "/research", label: "Read the Research" },
-      { href: "/books", label: "Read Presence" },
-    ],
-  },
-  {
-    label: "Confidence Under Pressure",
-    description: "Why high-stakes moments activate impostor syndrome — and how to show up anyway.",
-    links: [
-      { href: "/books", label: "Read Presence" },
-      { href: "/speaking", label: "Book a Keynote" },
-      { href: "/writing", label: "Read Her Writing" },
-    ],
-  },
-  {
-    label: "Leadership & Trust",
-    description: "Warmth before authority. Twenty years of research on what makes people follow a leader.",
-    links: [
-      { href: "/research", label: "Research Overview" },
-      { href: "/speaking", label: "Speaking Topics" },
-      { href: "/writing", label: "Read Her Writing" },
-    ],
-  },
-  {
-    label: "Bullying & Social Bravery",
-    description: "Bullying doesn't stay in the schoolyard. It follows us into work and relationships for decades.",
-    links: [
-      { href: "/books", label: "Pre-order Bullied" },
-      { href: "/writing", label: "Read Her Writing" },
-      { href: "/research", label: "Research Overview" },
-    ],
-  },
+const topicLinks = [
+  { href: "/topics/presence-body-language", label: "Presence & Body Language" },
+  { href: "/topics/confidence-under-pressure", label: "Confidence Under Pressure" },
+  { href: "/topics/leadership-trust", label: "Leadership & Trust" },
+  { href: "/topics/bullying-social-bravery", label: "Bullying & Social Bravery" },
 ];
 
 const topLinks = [{ href: "/media", label: "Media" }];
@@ -163,13 +131,15 @@ export default function Navigation() {
                   topicsOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"
                 }`}
               >
-                {topics.map((topic) => (
+                {topicLinks.map((link) => (
                   <Link
-                    key={topic.label}
-                    href={topic.links[0].href}
-                    className="block px-4 py-2.5 text-sm font-medium transition-colors text-text-secondary hover:text-text-primary hover:bg-gray-50"
+                    key={link.href}
+                    href={link.href}
+                    className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
+                      pathname === link.href ? "text-navy bg-blue-50" : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
+                    }`}
                   >
-                    {topic.label}
+                    {link.label}
                   </Link>
                 ))}
               </div>
@@ -254,13 +224,15 @@ export default function Navigation() {
               <span className={`transition-transform duration-200 ${mobileTopicsOpen ? "rotate-180" : ""}`}>{chevron}</span>
             </button>
             <div className={`overflow-hidden transition-all duration-200 ${mobileTopicsOpen ? "max-h-64" : "max-h-0"}`}>
-              {topics.map((topic) => (
+              {topicLinks.map((link) => (
                 <Link
-                  key={topic.label}
-                  href={topic.links[0].href}
-                  className="block pl-6 pr-3 py-2.5 text-sm font-medium transition-colors rounded-md text-text-secondary hover:text-text-primary hover:bg-gray-50"
+                  key={link.href}
+                  href={link.href}
+                  className={`block pl-6 pr-3 py-2.5 text-sm font-medium transition-colors rounded-md ${
+                    pathname === link.href ? "text-navy bg-blue-50" : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
+                  }`}
                 >
-                  {topic.label}
+                  {link.label}
                 </Link>
               ))}
             </div>
