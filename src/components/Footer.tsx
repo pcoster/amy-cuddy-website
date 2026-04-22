@@ -9,7 +9,6 @@ const footerLinks = [
   { href: "/writing", label: "Writing" },
   { href: "/media", label: "Media" },
   { href: "/research", label: "Research" },
-  { href: "/events", label: "Events" },
 ];
 
 export default function Footer() {

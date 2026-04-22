@@ -14,7 +14,6 @@ const aboutLinks = [
 
 const topLinks = [
   { href: "/media", label: "Media" },
-  { href: "/events", label: "Events" },
 ];
 
 const aboutPaths = aboutLinks.map((l) => l.href);
