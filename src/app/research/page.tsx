@@ -27,7 +27,7 @@ export default function ResearchPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-navy overflow-hidden">
+      <section className="relative pt-16 pb-20 md:pt-20 md:pb-28 bg-navy overflow-hidden">
         <div className="absolute inset-0 opacity-[0.04]">
           <div
             className="absolute inset-0"

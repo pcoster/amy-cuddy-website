@@ -50,7 +50,7 @@ export default async function BookPage({
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative pt-24 pb-0 bg-[#0D0D0D] overflow-hidden">
+      <section className="relative pt-10 pb-0 bg-[#0D0D0D] overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]">
           <div
             className="absolute inset-0"
