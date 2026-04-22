@@ -5,11 +5,13 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 
 const aboutLinks = [
-  { href: "/about", label: "About Amy" },
-  { href: "/speaking", label: "Speaking" },
-  { href: "/books", label: "Books" },
-  { href: "/writing", label: "Writing" },
-  { href: "/research", label: "Research" },
+  { href: "/about", label: "About Amy", indent: false },
+  { href: "/speaking", label: "Speaking", indent: false },
+  { href: "/books", label: "Books", indent: false },
+  { href: "/books/presence", label: "Presence", indent: true },
+  { href: "/books/bullied", label: "Bullied", indent: true },
+  { href: "/writing", label: "Writing", indent: false },
+  { href: "/research", label: "Research", indent: false },
 ];
 
 const topicLinks = [
@@ -22,6 +24,7 @@ const topicLinks = [
 const topLinks = [{ href: "/media", label: "Media" }];
 
 const aboutPaths = aboutLinks.map((l) => l.href);
+const aboutTopLevelPaths = aboutLinks.filter((l) => !l.indent).map((l) => l.href);
 const chevron = (
   <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor">
     <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
@@ -104,10 +107,13 @@ export default function Navigation() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
-                      pathname === link.href ? "text-navy bg-blue-50" : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
+                    className={`block py-2 text-sm font-medium transition-colors ${
+                      link.indent ? "pl-7 pr-4 text-xs text-text-secondary/80" : "px-4"
+                    } ${
+                      pathname === link.href ? "text-navy bg-blue-50" : "hover:text-text-primary hover:bg-gray-50 text-text-secondary"
                     }`}
                   >
+                    {link.indent && <span className="mr-1.5 text-gray-300">↳</span>}
                     {link.label}
                   </Link>
                 ))}
@@ -204,10 +210,13 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block pl-6 pr-3 py-2.5 text-sm font-medium transition-colors rounded-md ${
+                  className={`block pr-3 rounded-md transition-colors ${
+                    link.indent ? "pl-10 py-2 text-xs text-text-secondary/80" : "pl-6 py-2.5 text-sm font-medium"
+                  } ${
                     pathname === link.href ? "text-navy bg-blue-50" : "text-text-secondary hover:text-text-primary hover:bg-gray-50"
                   }`}
                 >
+                  {link.indent && <span className="mr-1.5 text-gray-300">↳</span>}
                   {link.label}
                 </Link>
               ))}

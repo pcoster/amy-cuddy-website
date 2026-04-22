@@ -112,6 +112,12 @@ export default function BookCard({ book, variant = "card", reversed = false }: B
                 Barnes &amp; Noble
               </a>
             )}
+            <Link
+              href={`/books/${book.id}`}
+              className="px-6 py-3 border border-gray-200 text-text-secondary font-semibold text-sm rounded-md hover:border-gray-400 transition-colors"
+            >
+              About this book →
+            </Link>
           </div>
         </div>
       </div>
