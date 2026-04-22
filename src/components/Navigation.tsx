@@ -125,14 +125,12 @@ export default function Navigation() {
               </Link>
             ))}
 
-            <a
-              href="https://www.utaspeakers.com/speaker/amy-cuddy"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/books"
               className="ml-4 px-5 py-2.5 bg-navy text-white text-sm font-semibold tracking-wide rounded-md hover:bg-navy-dark transition-colors shadow-sm"
             >
-              Book Amy
-            </a>
+              Get the Books
+            </Link>
           </div>
 
           {/* Mobile hamburger */}
@@ -204,14 +202,12 @@ export default function Navigation() {
               </Link>
             ))}
 
-            <a
-              href="https://www.utaspeakers.com/speaker/amy-cuddy"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/books"
               className="mt-3 px-5 py-3 bg-navy text-white text-base font-semibold text-center rounded-md hover:bg-navy-dark transition-colors"
             >
-              Book Amy
-            </a>
+              Get the Books
+            </Link>
           </div>
         </div>
       </nav>

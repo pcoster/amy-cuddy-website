@@ -113,20 +113,20 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-12 flex flex-wrap gap-4">
-            <a
-              href="https://www.utaspeakers.com/speaker/amy-cuddy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-navy text-white font-semibold rounded-md hover:bg-navy-dark transition-colors"
-            >
-              Book Amy to Speak
-            </a>
             <Link
               href="/books"
+              className="px-8 py-4 bg-navy text-white font-semibold rounded-md hover:bg-navy-dark transition-colors"
+            >
+              Get the Books
+            </Link>
+            <a
+              href={siteConfig.social.tedTalk}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 border border-gray-200 text-text-secondary font-semibold rounded-md hover:border-gray-300 transition-colors"
             >
-              Explore Her Books
-            </Link>
+              Watch the TED Talk
+            </a>
           </div>
         </div>
       </section>
@@ -317,14 +317,12 @@ export default function AboutPage() {
             is for you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://www.utaspeakers.com/speaker/amy-cuddy"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/books"
               className="px-8 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors"
             >
-              Book Amy to Speak
-            </a>
+              Get the Books
+            </Link>
             <a
               href={siteConfig.social.tedTalk}
               target="_blank"

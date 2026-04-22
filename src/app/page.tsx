@@ -92,19 +92,17 @@ export default function HomePage() {
                 {siteConfig.taglineSub}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="https://www.utaspeakers.com/speaker/amy-cuddy"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/books"
                   className="px-8 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors shadow-lg text-center"
                 >
-                  Book Amy to Speak
-                </a>
+                  Get the Books
+                </Link>
                 <Link
                   href="/about"
                   className="px-8 py-4 border border-white/30 text-white font-semibold rounded-md hover:bg-white/10 transition-colors text-center"
                 >
-                  Learn More
+                  About Amy
                 </Link>
               </div>
               <div className="mt-14 flex flex-wrap gap-x-10 gap-y-6">
@@ -317,40 +315,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── BOOKING CTA ── */}
-      <section className="py-24 bg-navy relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.04]">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-              backgroundSize: "48px 48px",
-            }}
-          />
-        </div>
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gold/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-4">
-            Speaker Inquiries
-          </p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Bring Amy to Your Organization
-          </h2>
-          <p className="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
-            Amy delivers transformative keynotes and workshops for corporations, universities,
-            nonprofits, and conferences worldwide. Tailored to your audience. Grounded in science.
-            Built to inspire lasting change.
-          </p>
-          <a
-            href="https://www.utaspeakers.com/speaker/amy-cuddy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-10 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors shadow-lg inline-block"
-          >
-            Submit a Booking Inquiry
-          </a>
-        </div>
-      </section>
     </>
   );
 }

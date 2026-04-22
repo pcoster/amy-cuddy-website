@@ -123,15 +123,6 @@ export default function Footer() {
                 {siteConfig.contact.email}
               </a>
             </div>
-            <div className="mt-3">
-              <p className="text-white/40 text-xs mb-1">Speaking & booking</p>
-              <a
-                href={`mailto:${siteConfig.contact.bookingEmail}`}
-                className="text-white/60 hover:text-white text-sm transition-colors"
-              >
-                {siteConfig.contact.bookingEmail}
-              </a>
-            </div>
           </div>
         </div>
 
@@ -141,9 +132,9 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Amy Cuddy. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="https://www.utaspeakers.com/speaker/amy-cuddy" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white/60 text-sm transition-colors">
-              Book Amy
-            </a>
+            <Link href="/speaking" className="text-white/30 hover:text-white/60 text-sm transition-colors">
+              Speaking
+            </Link>
           </div>
         </div>
 

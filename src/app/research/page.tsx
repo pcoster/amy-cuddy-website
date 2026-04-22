@@ -238,14 +238,6 @@ export default function ResearchPage() {
             >
               Google Scholar Profile
             </a>
-            <a
-              href="https://www.utaspeakers.com/speaker/amy-cuddy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 border border-white/30 text-white font-semibold rounded-md hover:bg-white/10 transition-colors"
-            >
-              Get in Touch
-            </a>
           </div>
         </div>
       </section>
