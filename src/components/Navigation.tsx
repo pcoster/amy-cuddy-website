@@ -11,7 +11,6 @@ const navLinks = [
   { href: "/writing", label: "Writing" },
   { href: "/media", label: "Media" },
   { href: "/events", label: "Events" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navigation() {
@@ -63,12 +62,14 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
+            <a
+              href="https://www.utaspeakers.com/speaker/amy-cuddy"
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-4 px-5 py-2.5 bg-navy text-white text-sm font-semibold tracking-wide rounded-md hover:bg-navy-dark transition-colors shadow-sm"
             >
               Book Amy
-            </Link>
+            </a>
           </div>
 
           {/* Mobile hamburger */}
@@ -118,12 +119,14 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
+            <a
+              href="https://www.utaspeakers.com/speaker/amy-cuddy"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-3 px-5 py-3 bg-navy text-white text-base font-semibold text-center rounded-md hover:bg-navy-dark transition-colors"
             >
               Book Amy
-            </Link>
+            </a>
           </div>
         </div>
       </nav>

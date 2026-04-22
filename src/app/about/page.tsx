@@ -98,12 +98,14 @@ export default function AboutPage() {
 
               {/* CTA buttons */}
               <div className="mt-12 flex flex-wrap gap-4">
-                <Link
-                  href="/speaking"
+                <a
+                  href="https://www.utaspeakers.com/speaker/amy-cuddy"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-4 bg-navy text-white font-semibold rounded-md hover:bg-navy-dark transition-colors"
                 >
                   Book Amy to Speak
-                </Link>
+                </a>
                 <Link
                   href="/books"
                   className="px-8 py-4 border border-gray-200 text-text-secondary font-semibold rounded-md hover:border-gray-300 transition-colors"
@@ -233,12 +235,14 @@ export default function AboutPage() {
           <p className="text-white/70 text-lg mb-10">
             Bring Amy&apos;s research and insights to your organization, conference, or event.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href="https://www.utaspeakers.com/speaker/amy-cuddy"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-10 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors"
           >
             Get in Touch
-          </Link>
+          </a>
         </div>
       </section>
     </>

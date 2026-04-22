@@ -155,12 +155,14 @@ export default function MediaPage() {
             For interview requests, feature articles, or press inquiries, please get in touch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <a
+              href="https://www.utaspeakers.com/speaker/amy-cuddy"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors"
             >
               Media Inquiry
-            </Link>
+            </a>
             <a
               href={`mailto:${siteConfig.contact.email}`}
               className="px-8 py-4 border border-white/30 text-white font-semibold rounded-md hover:bg-white/10 transition-colors"

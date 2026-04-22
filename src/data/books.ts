@@ -13,7 +13,8 @@ export interface Book {
   subtitle: string;
   description: string;
   longDescription: string;
-  cover: string;
+  cover?: string;
+  coverGradient?: string;
   coverAlt: string;
   publishYear: number;
   publisher: string;
@@ -47,8 +48,8 @@ Drawing on cutting-edge science, inspiring personal stories, and practical advic
     pages: 352,
     isbn: "978-0316387002",
     buyLinks: {
-      amazon: "https://www.amazon.com/Presence-Bringing-Boldest-Biggest-Challenges/dp/0316387002",
-      bookshop: "https://bookshop.org/books/presence-bringing-your-boldest-self-to-your-biggest-challenges/9780316387002",
+      amazon: "https://www.amazon.com/dp/0316256587",
+      bookshop: "https://bookshop.org/p/books/presence-bringing-your-boldest-self-to-your-biggest-challenges-amy-cuddy/5a53c8620a02b9d0?ean=9780316256582&next=t",
       barnesAndNoble: "https://www.barnesandnoble.com/w/presence-amy-cuddy/1120999941",
     },
     keyThemes: [
@@ -80,13 +81,12 @@ In *Bullied*, social psychologist Amy Cuddy draws on her own experiences with bu
 This is not a book about bullying as a childhood problem. It is a book about power, fear, belonging, and what happens to a society when cruelty becomes normalized. And crucially, it is a book about resistance, resilience, and reclaiming your sense of self in the aftermath of harm.
 
 *Bullied* offers not just a diagnosis, but a path forward — for survivors, for bystanders, and for anyone who wants to build a world where presence and dignity are protected rather than punished.`,
-    cover: "/images/books/bullied-cover.jpg",
+    coverGradient: "linear-gradient(135deg, #990000, #CC0000)",
     coverAlt: "Bullied by Amy Cuddy — book cover (forthcoming)",
     publishYear: 2027,
     publisher: "Little, Brown and Company",
     buyLinks: {
-      amazon: "https://www.amazon.com",
-      bookshop: "https://bookshop.org",
+      amazon: "https://www.amazon.com/dp/0358278139",
     },
     keyThemes: [
       "The psychology of bullying",

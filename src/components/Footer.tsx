@@ -10,7 +10,6 @@ const footerLinks = [
   { href: "/media", label: "Media" },
   { href: "/research", label: "Research" },
   { href: "/events", label: "Events" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Footer() {
@@ -143,12 +142,9 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Amy Cuddy. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="/contact" className="text-white/30 hover:text-white/60 text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/contact" className="text-white/30 hover:text-white/60 text-sm transition-colors">
-              Terms of Use
-            </Link>
+            <a href="https://www.utaspeakers.com/speaker/amy-cuddy" target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white/60 text-sm transition-colors">
+              Book Amy
+            </a>
           </div>
         </div>
 

@@ -44,12 +44,14 @@ export default function SpeakingPage() {
             personal storytelling, and designed to produce lasting change.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <a
+              href="https://www.utaspeakers.com/speaker/amy-cuddy"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors shadow-lg"
             >
               Submit a Booking Inquiry
-            </Link>
+            </a>
             <a
               href="#topics"
               className="px-8 py-4 border border-white/30 text-white font-semibold rounded-md hover:bg-white/10 transition-colors"
@@ -178,12 +180,14 @@ export default function SpeakingPage() {
           <p className="text-white/70 text-lg mb-10">
             Submit an inquiry and our team will respond within 2–3 business days.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href="https://www.utaspeakers.com/speaker/amy-cuddy"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-10 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors shadow-lg inline-block"
           >
             Submit a Booking Inquiry
-          </Link>
+          </a>
         </div>
       </section>
     </>

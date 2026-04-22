@@ -22,7 +22,10 @@ export default function BookCard({ book, variant = "card", reversed = false }: B
             {book.cover ? (
               <Image src={book.cover} alt={book.title} fill className="object-cover" />
             ) : (
-              <div className="w-full h-full bg-gradient-to-br from-navy to-navy-dark flex items-end justify-center">
+              <div
+                className="w-full h-full flex items-end justify-center"
+                style={{ background: book.coverGradient ?? "linear-gradient(135deg, #1B3A6B, #0f2548)" }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
                 <div className="relative p-6 text-center">
                   <p className="font-serif text-white font-bold text-xl leading-tight mb-1">{book.title}</p>
@@ -86,7 +89,7 @@ export default function BookCard({ book, variant = "card", reversed = false }: B
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-gold text-[#0D0D0D] font-semibold text-sm rounded-md hover:bg-gold-dark transition-colors"
               >
-                Buy on Amazon
+                {book.status === "forthcoming" ? "Pre-order on Amazon" : "Buy on Amazon"}
               </a>
             )}
             {book.buyLinks.bookshop && (
@@ -118,7 +121,10 @@ export default function BookCard({ book, variant = "card", reversed = false }: B
   // Card variant
   return (
     <div className="group flex flex-col bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
-      <div className="relative h-56 bg-gradient-to-br from-navy to-navy-dark flex items-end justify-center p-6 overflow-hidden">
+      <div
+        className="relative h-56 flex items-end justify-center p-6 overflow-hidden"
+        style={{ background: book.coverGradient ?? "linear-gradient(135deg, #1B3A6B, #0f2548)" }}
+      >
         {book.cover && <Image src={book.cover} alt={book.title} fill className="object-cover" />}
         {!book.cover && (
           <div className="text-center">

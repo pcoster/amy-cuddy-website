@@ -11,8 +11,8 @@ export const siteConfig = {
     short:
       "Amy Cuddy is a social psychologist, bestselling author, and award-winning Harvard Business School professor whose research on body language, power, and presence has transformed how people understand themselves and how they show up in the world.",
     medium:
-      "Amy Cuddy is a social psychologist, bestselling author, and award-winning Harvard Business School professor (on leave) best known for her research on body language, power dynamics, and the science of presence. Her 2012 TED Talk — the third most-watched TED Talk of all time with over 70 million views — introduced millions to the concept of \"power posing\" and the idea that our bodies shape our minds as much as our minds shape our bodies.",
-    long: `Amy Cuddy is a social psychologist, bestselling author, and award-winning Harvard Business School professor (on leave) whose groundbreaking research on body language, power, and presence has fundamentally changed how people think about confidence, leadership, and human connection.
+      "Amy Cuddy is a social psychologist, bestselling author, and award-winning Harvard Business School professor best known for her research on body language, power dynamics, and the science of presence. Her 2012 TED Talk — the third most-watched TED Talk of all time with over 70 million views — introduced millions to the concept of \"power posing\" and the idea that our bodies shape our minds as much as our minds shape our bodies.",
+    long: `Amy Cuddy is a social psychologist, bestselling author, and award-winning Harvard Business School professor whose groundbreaking research on body language, power, and presence has fundamentally changed how people think about confidence, leadership, and human connection.
 
 Her 2012 TED Talk, "Your Body Language May Shape Who You Are," became the third most-watched TED Talk in history, with over 70 million views across platforms. In it, she introduced the concept of "power posing" — the idea that adopting expansive, open postures can meaningfully shift how we feel about ourselves and how we perform under pressure.
 
@@ -30,7 +30,7 @@ Beyond her academic work, Amy has been a fierce advocate for people who have exp
   credentials: [
     "Ph.D., Psychology, Princeton University",
     "B.A. (magna cum laude), Psychology, University of Colorado at Boulder",
-    "Professor, Harvard Business School (on leave)",
+    "Professor, Harvard Business School",
     "Former Faculty, Northwestern University Kellogg School of Management",
     "Author, *Presence* (2015) — NYT Bestseller, 30+ languages",
     "TED Talk: 3rd most-watched of all time (70M+ views)",

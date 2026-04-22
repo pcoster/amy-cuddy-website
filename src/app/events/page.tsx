@@ -84,7 +84,9 @@ export default function EventsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/contact"
+                  href="https://www.utaspeakers.com/speaker/amy-cuddy"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-3 bg-navy text-white font-semibold rounded-md hover:bg-navy-dark transition-colors"
                 >
                   Book Amy for Your Event
@@ -118,7 +120,9 @@ export default function EventsPage() {
               </div>
               <div className="flex-shrink-0">
                 <Link
-                  href="/contact"
+                  href="https://www.utaspeakers.com/speaker/amy-cuddy"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-4 bg-navy text-white font-semibold rounded-md hover:bg-navy-dark transition-colors whitespace-nowrap block text-center"
                 >
                   Submit Inquiry

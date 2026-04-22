@@ -54,12 +54,14 @@ export default function HomePage() {
                 {siteConfig.taglineSub}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/speaking"
+                <a
+                  href="https://www.utaspeakers.com/speaker/amy-cuddy"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-8 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors shadow-lg text-center"
                 >
                   Book Amy to Speak
-                </Link>
+                </a>
                 <Link
                   href="/about"
                   className="px-8 py-4 border border-white/30 text-white font-semibold rounded-md hover:bg-white/10 transition-colors text-center"
@@ -124,10 +126,6 @@ export default function HomePage() {
                   fill
                   className="object-cover object-top"
                 />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-navy rounded-xl p-6 shadow-xl max-w-[200px]">
-                <p className="text-white font-semibold text-sm">Harvard Business School</p>
-                <p className="text-white/60 text-xs mt-1">Professor (on leave)</p>
               </div>
             </div>
 
@@ -379,12 +377,14 @@ export default function HomePage() {
             Built to inspire lasting change.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <a
+              href="https://www.utaspeakers.com/speaker/amy-cuddy"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-10 py-4 bg-gold text-[#0D0D0D] font-semibold rounded-md hover:bg-gold-light transition-colors shadow-lg"
             >
               Submit a Booking Inquiry
-            </Link>
+            </a>
             <Link
               href="/speaking"
               className="px-10 py-4 border border-white/30 text-white font-semibold rounded-md hover:bg-white/10 transition-colors"

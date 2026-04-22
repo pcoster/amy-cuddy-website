@@ -206,12 +206,14 @@ export default function BooksPage() {
             >
               View Speaking Topics
             </Link>
-            <Link
-              href="/contact"
+            <a
+              href="https://www.utaspeakers.com/speaker/amy-cuddy"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 border border-gray-200 text-text-secondary font-semibold rounded-md hover:border-gray-300 transition-colors"
             >
               Book Amy
-            </Link>
+            </a>
           </div>
         </div>
       </section>
