@@ -22,6 +22,40 @@ export interface Topic {
 
 export const topics: Topic[] = [
   {
+    slug: "power-posing",
+    label: "Power Posing",
+    tagline: "The most contested — and most misunderstood — finding in social psychology. Here's what the science actually says.",
+    intro: [
+      "In 2010, Amy Cuddy and colleagues published a paper suggesting that adopting expansive, open postures for just two minutes could shift hormone levels and increase feelings of power. The idea went global. Then came the controversy.",
+      "Power posing became the flashpoint of a much larger debate about replication in social science. Some effects proved harder to reproduce than others. Critics were loud. Coverage was often reductive. The nuanced version of the story — what actually replicated, what didn't, and why the core insight still holds — rarely made the headlines.",
+      "This page is the full account. The original research, the replication debate, what the evidence now shows, and what it means practically for anyone who wants to show up more powerfully under pressure.",
+    ],
+    insights: [
+      {
+        heading: "The original finding",
+        body: "The 2010 paper by Carney, Cuddy & Yap found that two minutes of high-power poses increased testosterone by ~19% and decreased cortisol by ~25%, and also increased risk tolerance. These were striking results.",
+      },
+      {
+        heading: "What the replication debate showed",
+        body: "Subsequent studies found the hormonal effects inconsistent — they didn't always replicate at scale. The psychological and behavioural effects — feeling more powerful, being rated as more confident — showed more consistent support across studies.",
+      },
+      {
+        heading: "What the meta-analysis found",
+        body: "A 2018 meta-analysis of 55 studies by Cuddy, Schultz & Fosse found a small but robust effect of expansive posture on feelings of power. The effect is real — it is not as large, or as hormonal, as the original paper suggested.",
+      },
+      {
+        heading: "The practical takeaway",
+        body: "You don't need a hormonal shift to benefit from physical preparation. The consistent finding is that how you hold your body affects how you feel, and how you feel affects how you show up. That connection is well-supported and practically meaningful.",
+      },
+    ],
+    relatedLinks: [
+      { label: "Watch the TED Talk", href: "https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are", external: true, badge: "70M+ views" },
+      { label: "Read Presence", href: "/books/presence", badge: "NYT Bestseller" },
+      { label: "Research Overview", href: "/research" },
+    ],
+    color: "navy",
+  },
+  {
     slug: "presence-body-language",
     label: "Presence & Body Language",
     tagline: "Your body shapes your mind. The science is unambiguous — and the implications are profound.",
