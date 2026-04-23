@@ -84,7 +84,7 @@ This is not a book about bullying as a childhood problem. It is a book about pow
     coverGradient: "linear-gradient(135deg, #990000, #CC0000)",
     coverAlt: "Bullied by Amy Cuddy — book cover (forthcoming)",
     publishYear: 2027,
-    publisher: "Little, Brown and Company",
+    publisher: "HarperCollins",
     buyLinks: {
       amazon: "https://www.amazon.com/dp/0358278139",
     },
