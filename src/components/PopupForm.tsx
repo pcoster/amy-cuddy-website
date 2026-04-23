@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "ac_popup_seen";
 const DELAY_MS = 4000;
-const KIT_FORM_UID = "8d3480defa";
-
 type Status = "idle" | "submitting" | "success" | "error";
 
 export default function PopupForm() {
@@ -32,17 +30,14 @@ export default function PopupForm() {
     setErrorMsg("");
 
     try {
-      const res = await fetch(
-        `https://app.convertkit.com/forms/${KIT_FORM_UID}/subscriptions`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            first_name: firstName.trim(),
-            email_address: email.trim(),
-          }),
-        }
-      );
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email.trim(),
+          firstName: firstName.trim(),
+        }),
+      });
 
       if (res.ok) {
         setStatus("success");
