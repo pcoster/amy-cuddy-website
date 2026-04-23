@@ -97,11 +97,11 @@ export default function BooksPage() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-gold text-6xl font-serif leading-none mb-6">&ldquo;</div>
           <blockquote className="font-serif text-2xl md:text-3xl text-white leading-relaxed mb-8">
-            Amy Cuddy has a rare gift: she takes complex science and makes it immediately useful. I&apos;ve recommended it to every leader I coach.
+            Amy Cuddy is making the world a braver place with her book, Presence. Weaving together science, practical examples, and storytelling, Cuddy shows us how bringing our boldest, most authentic selves to challenging situations inspires others to do the same. This book is a game-changer!
           </blockquote>
           <div>
-            <p className="font-semibold text-white/90">Dr. Marshall Goldsmith</p>
-            <p className="text-white/50 text-sm mt-1">Author of <em>What Got You Here Won&apos;t Get You There</em></p>
+            <p className="font-semibold text-white/90">Brené Brown</p>
+            <p className="text-white/50 text-sm mt-1">Author of <em>Daring Greatly</em> &amp; <em>Rising Strong</em></p>
           </div>
         </div>
       </section>
