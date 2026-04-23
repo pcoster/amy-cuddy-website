@@ -54,7 +54,7 @@ Beyond her academic work, Amy has been a fierce advocate for people who have exp
   social: {
     linkedin: "https://www.linkedin.com/in/amy-cuddy-3654034/",
     instagram: "https://www.instagram.com/amycuddy/",
-    tedTalk: "https://www.youtube.com/watch?v=Ks-_Mh1QhMc",
+    tedTalk: "https://youtu.be/Ks-_Mh1QhMc?si=lJmomZB4U71Xb9Le",
   },
 
   images: {

@@ -188,7 +188,7 @@ export default function PowerPosingPage() {
       {/* ── TED TALK ── */}
       <section className="bg-[#0D0D0D] py-0">
         <a
-          href="https://www.youtube.com/watch?v=Ks-_Mh1QhMc"
+          href="https://youtu.be/Ks-_Mh1QhMc?si=lJmomZB4U71Xb9Le"
           target="_blank"
           rel="noopener noreferrer"
           className="group block relative overflow-hidden"
