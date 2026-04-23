@@ -322,6 +322,72 @@ export default function PowerPosingPage() {
         </div>
       </section>
 
+      {/* ── MYTH VS TRUTH ── */}
+      <section className="py-24 bg-[#0D0D0D]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-14">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-3">
+              Setting the Record Straight
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white">
+              What you may have heard — and what the evidence actually shows
+            </h2>
+          </div>
+
+          <div className="space-y-0 divide-y divide-white/10 border-t border-white/10">
+            {[
+              {
+                myth: `"Power posing was debunked."`,
+                truth: `This is one of the most-repeated inaccuracies in science journalism. What was challenged in replication attempts was a specific question: whether power posing reliably changes hormone levels — testosterone and cortisol. That hormonal mechanism remains scientifically open. The core finding — that adopting expansive postures increases your subjective sense of power — has been found in nearly every study that has tested it, across dozens of independent labs. A 55-study meta-analysis in Psychological Science (2018) found clear evidential value for the felt power effect. A Bayesian meta-analysis co-authored by prominent sceptics found "very strong evidence." The felt power effect was not debunked. A specific hormonal mechanism was questioned.`,
+              },
+              {
+                myth: `"The original researcher said it doesn't work."`,
+                truth: `This refers to a blog post Dana Carney published on her faculty webpage in 2016 — not a peer-reviewed paper. The following year, Carney co-authored a peer-reviewed introduction to the CRSP Special Issue on Power Poses with Cesario and Jonas, published in Comprehensive Results in Social Psychology. In that paper — her most recent scientific statement on the topic — she and her co-authors acknowledge that the issue's Bayesian meta-analysis "showed a reliable non-zero effect on felt power" and that "there may be some value of power poses on self-reported sense of power." A private blog post is not a scientific retraction. Her most recent peer-reviewed word on the subject acknowledges the evidence.`,
+              },
+              {
+                myth: `"The big replication study proved it doesn't work."`,
+                truth: `The Ranehill et al. (2015) study in Psychological Science is cited endlessly as the definitive failed replication. Reading the actual paper tells a more careful story. In their sample of 200 participants, the researchers found a statistically significant increase in self-reported feelings of power in the expansive pose condition. That is a replication of the core psychological claim. What did not replicate were the hormonal effects and risk tolerance. The study that is most often cited as proof power posing fails actually replicated the effect that Amy has always said matters most.`,
+              },
+              {
+                myth: `"It only works if you already know about it — it's just a placebo."`,
+                truth: `This concern was raised when one analysis found the felt power effect was weaker in participants who had never heard of Amy's TED Talk. But the Körner, Köhler & Schütz (2020) preregistered study with German fourth-graders found significant improvements in global self-esteem, school self-esteem, positive feelings, and relationships with teachers — in children who were almost certainly unaware of power posing research. Effects observed in primary school children on real-world outcomes like self-esteem and social relationships are not plausibly explained by demand characteristics or prior knowledge of the hypothesis.`,
+              },
+              {
+                myth: `"Even the critics who analysed it said it was fake."`,
+                truth: `Data Colada — one of the most rigorous and respected critical voices in psychological methods — conducted their own p-curve analysis of power posing studies. For studies measuring self-reported feelings of power, their analysis showed a directionally right-skewed p-curve: the statistical signature of a genuine effect. Even in a critical analysis by researchers not predisposed toward the broader claims, the felt power effect showed up in the data. That finding has been consistently overlooked in popular coverage of their post.`,
+              },
+              {
+                myth: `"It doesn't change anything in the real world — just how you feel."`,
+                truth: `The job interview study (Cuddy, Wilmuth, Yap & Carney, 2015, Journal of Applied Psychology) found that participants who power posed before a mock interview were rated significantly more hireable by independent evaluators watching recordings — blind to which condition participants had been in. The content of answers was equivalent. What changed was how participants showed up: their presence, composure, and nonverbal confidence. Being hired is about as real-world an outcome as exists. The felt sense of power, it turns out, is not just a number on a scale — it changes how you behave in consequential moments.`,
+              },
+              {
+                myth: `"The effect is too small to matter."`,
+                truth: `Effect size and practical significance are different things. Small average effects in psychology can have large real-world consequences, particularly in high-stakes, zero-sum situations like job interviews, negotiations, and competitions where small differences in presence and composure tip the outcome. The Körner school study found effects on children's self-esteem and teacher relationships — outcomes that compound over time. And for anyone who has felt paralysed by anxiety before a critical moment, even a modest shift in felt power is not a small thing.`,
+              },
+              {
+                myth: `"Amy Cuddy overstated what the science showed."`,
+                truth: `The hormonal effects described in the original 2010 paper went beyond what the evidence ultimately supported across subsequent studies, and Amy has said so directly and publicly. Her core message — that how you hold your body before a high-stakes situation can change how you feel, and that this matters — has been consistently supported. The distinction between what the original paper claimed and what Amy has always recommended in practice is important: she has always centred felt power and presence, not hormone levels, as the goal. That claim has held.`,
+              },
+            ].map(({ myth, truth }) => (
+              <div key={myth} className="py-10">
+                <p className="text-xs font-semibold tracking-[0.2em] uppercase text-white/30 mb-3">
+                  What you may have heard
+                </p>
+                <p className="font-serif text-xl md:text-2xl text-white/80 italic leading-snug mb-6">
+                  {myth}
+                </p>
+                <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-3">
+                  What the evidence shows
+                </p>
+                <p className="text-white/60 leading-relaxed">
+                  {truth}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── QUOTE ── */}
       <section className="py-24 bg-navy">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
