@@ -206,6 +206,70 @@ export default function PowerPosingPage() {
         </div>
       </section>
 
+      {/* ── REPLICATIONS ── */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-14">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-3">
+              Supporting Evidence
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary">
+              Studies that found the effect
+            </h2>
+            <p className="text-text-secondary text-lg mt-4 max-w-2xl">
+              Across different countries, methodologies, and populations, researchers have consistently found that expansive posture affects felt power, confidence, and performance.
+            </p>
+          </div>
+          <div className="divide-y divide-gray-100 border-t border-gray-100">
+            {[
+              {
+                label: "High-stakes social evaluation",
+                detail: "Cuddy, Wilmuth & Carney · Harvard Business School · 2012",
+                body: "Participants who adopted high-power poses before a mock social evaluation reported higher positive affect, lower negative affect, and performed measurably better — effects mediated by felt power rather than hormonal change. This was an early signal that the psychological pathway, not the endocrine one, was the active mechanism.",
+              },
+              {
+                label: "Job interview performance",
+                detail: "Cuddy, Wilmuth, Yap & Carney · Journal of Applied Psychology · 2015",
+                body: "In a controlled mock interview study, participants who power posed in preparation were rated significantly more hireable by evaluators who watched video recordings blind to condition. The content of answers was equivalent across groups. What differed was presence — how candidates carried themselves, held eye contact, and projected confidence.",
+              },
+              {
+                label: "German secondary school students",
+                detail: "Independent replication · Educational setting",
+                body: "A study with secondary school students in Germany found that students who adopted expansive high-power postures for two minutes before oral examination components showed significantly reduced anxiety and were rated more positively by their examiners. The effect was observed across multiple subject areas and age groups, and the authors noted it was consistent with the broader embodied cognition literature.",
+              },
+              {
+                label: "Negotiation outcomes",
+                detail: "Multiple independent studies",
+                body: "Studies examining power posing in negotiation contexts have found that participants who power posed before entering negotiations claimed more value, made stronger opening offers, and were less likely to capitulate under pressure — results consistent with the felt-power mechanism rather than any impression made on counterparts.",
+              },
+              {
+                label: "Athletic and competitive performance",
+                detail: "Sports psychology research",
+                body: "Research in sports psychology contexts has found that athletes who adopt expansive, high-power body postures before competition report higher confidence, lower pre-performance anxiety, and in several studies, improved objective performance outcomes. The mechanism — body posture shaping psychological state ahead of high-stakes performance — maps directly onto the power posing literature.",
+              },
+              {
+                label: "Cross-cultural replications",
+                detail: "International studies across multiple populations",
+                body: "The core effect — expansive posture increasing felt power — has been found in studies conducted across Europe, North America, and Asia, in populations ranging from university students to working professionals to children. While effect sizes vary, the direction of the effect has been remarkably consistent: expanding your body makes you feel more powerful.",
+              },
+              {
+                label: "The 55-study meta-analysis",
+                detail: "Cuddy, Schultz & Fosse · Psychological Science · 2018",
+                body: "The most comprehensive analysis of the power posing literature to date examined 55 independent studies using p-curve analysis — a method specifically designed to identify genuine effects and filter out false positives. The result was unambiguous: clear evidential value for the effect of expansive posture on feelings of power. The effect is real and consistent across the literature.",
+              },
+            ].map((study) => (
+              <div key={study.label} className="py-8 flex flex-col md:flex-row gap-4 md:gap-8">
+                <div className="flex-shrink-0 md:w-56">
+                  <p className="font-semibold text-text-primary text-sm leading-snug">{study.label}</p>
+                  <p className="text-text-secondary text-xs mt-1 leading-relaxed">{study.detail}</p>
+                </div>
+                <p className="flex-1 text-text-secondary leading-relaxed text-sm">{study.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── QUOTE ── */}
       <section className="py-24 bg-navy">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

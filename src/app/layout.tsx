@@ -32,12 +32,6 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Amy Cuddy",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.seo.defaultDescription,
-    creator: "@amyjccuddy",
-  },
   robots: {
     index: true,
     follow: true,

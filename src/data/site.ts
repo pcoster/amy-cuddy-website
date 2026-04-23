@@ -52,7 +52,6 @@ Beyond her academic work, Amy has been a fierce advocate for people who have exp
   },
 
   social: {
-    twitter: "https://twitter.com/amyjccuddy",
     linkedin: "https://www.linkedin.com/in/amy-cuddy-3654034/",
     instagram: "https://www.instagram.com/amycuddy/",
     tedTalk: "https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are",
