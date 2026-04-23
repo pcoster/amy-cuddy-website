@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const KIT_API_KEY = "bPzMbZh-SSWqENC3FTz_fg";
+const KIT_FORM_ID = "9363226";
+
 export async function POST(req: NextRequest) {
   try {
     const { email, firstName } = await req.json();
@@ -9,12 +12,12 @@ export async function POST(req: NextRequest) {
     }
 
     const res = await fetch(
-      `https://api.convertkit.com/v3/forms/${process.env.KIT_FORM_ID}/subscribe`,
+      `https://api.convertkit.com/v3/forms/${KIT_FORM_ID}/subscribe`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          api_key: process.env.KIT_PUBLIC_API_KEY,
+          api_key: KIT_API_KEY,
           email: email.trim(),
           first_name: firstName?.trim() ?? "",
         }),
