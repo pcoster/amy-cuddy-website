@@ -163,6 +163,20 @@ export default function PowerPosingPage() {
             <p className="text-lg text-text-secondary leading-relaxed">
               A meta-analysis of 55 independent studies — published in <em>Psychological Science</em> in 2018 — found clear, robust evidential value for the effect of expansive posture on feelings of power. The specific hormonal mechanisms proposed in the original 2010 paper remain a subject of ongoing scientific investigation. The core psychological and behavioural effect does not.
             </p>
+            <div className="pt-6 border-t border-gray-100 mt-6">
+              <p className="text-text-secondary text-sm mb-3">
+                Heard that power posing was &ldquo;debunked&rdquo;? Amy has written a detailed account of what the peer-reviewed record actually shows.
+              </p>
+              <Link
+                href="/topics/power-posing/state-of-the-science"
+                className="inline-flex items-center gap-2 text-navy font-semibold text-sm hover:gap-3 transition-all group"
+              >
+                Read: The State of the Science
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
