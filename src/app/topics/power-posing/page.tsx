@@ -93,6 +93,14 @@ const papers = [
     url: "https://www.tandfonline.com/doi/abs/10.1080/23743603.2017.1326760",
   },
   {
+    title: "CRSP special issue on power poses: what was the point and what did we learn?",
+    authors: "Cesario, Jonas & Carney",
+    journal: "Comprehensive Results in Social Psychology",
+    year: "2017",
+    description: "The peer-reviewed introduction to the CRSP special issue — co-authored by Dana Carney, making it her most recent peer-reviewed statement on power posing. The authors note that the Bayesian meta-analysis across the special issue \"showed a reliable non-zero effect on felt power\" and conclude \"there may be some value of power poses on self-reported sense of power.\" All three co-authors acknowledge they have supported the possibility of meaningful power pose effects.",
+    url: "https://doi.org/10.1080/23743603.2017.1309876",
+  },
+  {
     title: "Powerful and Confident Children through Expansive Body Postures? A Preregistered Study of Fourth Graders",
     authors: "Körner, Köhler & Schütz",
     journal: "School Psychology International",
@@ -290,6 +298,11 @@ export default function PowerPosingPage() {
                 label: "Even the sceptics' p-curve showed the felt power effect",
                 detail: "Data Colada · Post #37 · Simonsohn, Nelson & Simmons",
                 body: "Data Colada — one of the most influential methods blogs in psychology, known for rigorous critique of questionable research practices — conducted their own p-curve analysis of power posing studies. For studies using manipulation checks that measured self-reported feelings of power, they found a directionally right-skewed p-curve, the signature of a genuine effect in the data. Even in a critical analysis by researchers not sympathetic to the broader claims, the felt power effect showed up.",
+              },
+              {
+                label: "Carney's most recent peer-reviewed statement: evidence for felt power exists",
+                detail: "Cesario, Jonas & Carney · Comprehensive Results in Social Psychology · 2017",
+                body: "After her widely-cited 2016 blog post, Dana Carney co-authored this peer-reviewed introduction to the CRSP special issue alongside Cesario and Jonas — making it her most recent scientific statement on the topic. The paper acknowledges that the issue's Bayesian meta-analysis \"showed a reliable non-zero effect on felt power\" and states that \"there may be some value of power poses on self-reported sense of power.\" All three authors confirm they have at one point supported the possibility that power poses could have meaningful effects. Importantly, Carney also served as the expert reviewer for all replication proposals in the special issue, providing detailed experimental guidance to researchers attempting to replicate the findings.",
               },
               {
                 label: "Bayesian meta-analysis: very strong evidence for felt power",
