@@ -16,6 +16,7 @@ const aboutLinks = [
 
 const topicLinks = [
   { href: "/topics/power-posing", label: "Power Posing" },
+  { href: "/topics/stereotyping-prejudice", label: "Stereotyping & Prejudice" },
   { href: "/topics/presence-body-language", label: "Presence & Body Language" },
   { href: "/topics/confidence-under-pressure", label: "Confidence Under Pressure" },
   { href: "/topics/leadership-trust", label: "Leadership & Trust" },

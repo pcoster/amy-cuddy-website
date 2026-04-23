@@ -56,6 +56,40 @@ export const topics: Topic[] = [
     color: "navy",
   },
   {
+    slug: "stereotyping-prejudice",
+    label: "Stereotyping & Prejudice",
+    tagline: "How the mind sorts people into categories — and what that costs us, individually and collectively.",
+    intro: [
+      "Amy Cuddy's research on stereotyping and prejudice spans two decades and has produced some of the most cited findings in social psychology. At its centre is a deceptively simple question: how do we judge other people, and what do those judgments lead us to do?",
+      "Her work — developed in close collaboration with Susan Fiske and Peter Glick — shows that social perception organises itself around two fundamental dimensions: warmth and competence. Where a group lands on those two axes determines not just how we feel about them, but how we treat them.",
+      "The implications reach into workplaces, courts, hospitals, and history. From the maternal wall to antisemitism to the treatment of older adults, the Stereotype Content Model maps the emotional and behavioural machinery of prejudice with precision.",
+    ],
+    insights: [
+      {
+        heading: "The Stereotype Content Model",
+        body: "Groups are perceived along two dimensions — warmth and competence — and where they land predicts the specific emotions and behaviours directed toward them. This framework, developed by Fiske, Cuddy, Glick & Xu, has been replicated across more than 26 countries and is now one of the most widely cited models in social psychology.",
+      },
+      {
+        heading: "Envious prejudice and antisemitism",
+        body: "Groups perceived as high-competence but low-warmth — including Jewish people, Asian Americans, and other 'model minority' groups — face envy-based prejudice. They are admired for achievement but resented for it. In times of social threat or economic instability, envy-based stereotypes historically precede violence and scapegoating.",
+      },
+      {
+        heading: "The maternal wall",
+        body: "When women become mothers, research shows their perceived warmth increases — but their perceived competence drops sharply. This specific combination triggers pity rather than respect, and translates directly into hiring discrimination, salary penalties, and blocked promotion. The maternal wall is one of the most reliably documented forms of workplace gender bias.",
+      },
+      {
+        heading: "Prejudice has predictable emotional signatures",
+        body: "Different stereotype combinations produce different emotional responses — admiration, pity, envy, or contempt — and those emotions predict specific behaviours. The BIAS Map (Behaviors from Intergroup Affect and Stereotypes) shows that these are not random: the type of prejudice predicts the type of harm, with real implications for intervention.",
+      },
+    ],
+    relatedLinks: [
+      { label: "Research Overview", href: "/research" },
+      { label: "Leadership & Trust", href: "/topics/leadership-trust" },
+      { label: "Read Presence", href: "/books/presence" },
+    ],
+    color: "navy",
+  },
+  {
     slug: "presence-body-language",
     label: "Presence & Body Language",
     tagline: "Your body shapes your mind. The science is unambiguous — and the implications are profound.",
