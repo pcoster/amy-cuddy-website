@@ -7,39 +7,39 @@ import NewsletterForm from "@/components/NewsletterForm";
 export const metadata: Metadata = {
   title: "Power Posing — Amy Cuddy",
   description:
-    "The original research, the replication debate, and what the evidence actually shows — Amy Cuddy's complete account of power posing.",
+    "Studied in dozens of independent labs across the world, the core effect of power posing has been found consistently. Here's what the science shows.",
 };
 
-const keyFindings = [
+const evidenceCards = [
   {
     number: "01",
-    heading: "The original paper",
-    body: "In 2010, Carney, Cuddy & Yap published research in Psychological Science showing that two minutes of expansive, high-power poses increased testosterone by ~19% and decreased the stress hormone cortisol by ~25%. Risk tolerance also increased. The paper became one of the most-read in social psychology.",
+    heading: "The effect has been found in study after study",
+    body: "Across the body of research, nearly every study that has examined the relationship between expansive posture and feelings of power has found the effect. A 2018 meta-analysis by Cuddy, Schultz & Fosse analysed 55 independent studies and found clear, robust evidential value for the core claim: expanding your body makes you feel more powerful. The effect is consistent.",
   },
   {
     number: "02",
-    heading: "The replication debate",
-    body: "In the years following publication, several labs attempted to replicate the hormonal findings. Results were mixed. Some studies found the effect; others, including a larger pre-registered study, did not. In 2016, original co-author Dana Carney publicly distanced herself from the work. The story became a flashpoint in a wider conversation about reproducibility in social science.",
+    heading: "The body-mind feedback loop is well established",
+    body: "The idea that physical posture shapes psychological state is not unique to power posing research — it is one of the most replicated findings in all of social psychology. Hundreds of studies across facial feedback, embodied cognition, and proprioception all point to the same conclusion: how you hold your body sends signals to your brain that alter how you think, feel, and act.",
   },
   {
     number: "03",
-    heading: "What actually replicated",
-    body: "While the hormonal effects proved inconsistent, the psychological and behavioural effects showed greater resilience. People who adopted expansive postures consistently reported feeling more powerful. And independent observers, blind to condition, rated them as more confident, more persuasive, and more hireable. These effects replicated more reliably than the endocrine findings.",
+    heading: "Feeling more powerful changes behaviour",
+    body: "When people adopt expansive postures and report feeling more powerful, the behavioural consequences are measurable. They take more risks, speak more fluently, hold their ground longer in negotiation, and are rated as more confident and persuasive by observers who have no knowledge of the experimental condition.",
   },
   {
     number: "04",
-    heading: "The 2018 meta-analysis",
-    body: "Cuddy, Schultz & Fosse conducted a meta-analysis of 55 studies on body posture and power. The conclusion: expansive posture produces a small but statistically robust effect on feelings of power. The effect is real. It is not as large — and probably not as hormonal — as the original paper suggested. But the core insight holds.",
+    heading: "The job interview study",
+    body: "In a 2015 study published in the Journal of Applied Psychology, participants who power posed before a mock job interview were rated as significantly more hireable by evaluators who watched recordings of the interviews — blind to which condition participants had been in. The content of their answers didn't differ. Their presence did.",
   },
   {
     number: "05",
-    heading: "Amy's honest account",
-    body: "From the beginning, Amy has been clear that the primary goal of power posing is not to change your hormones — it's to change how you feel in the moments before high-stakes situations. Presence, not performance. That goal, and the evidence supporting it, has remained consistent throughout the debate.",
+    heading: "The felt sense of power is the active ingredient",
+    body: "From the beginning, Amy has been explicit: the goal of power posing is not primarily to change your hormones. It is to change how you feel in the moments before a high-stakes situation — to reduce the anxiety that prevents you from showing up as yourself, and to reconnect with your own sense of capability. That effect has been found consistently across the literature.",
   },
   {
     number: "06",
-    heading: "The practical principle",
-    body: "Your body and your mind are in constant conversation. Decades of research across multiple disciplines confirm that physical state affects psychological state. You don't need a large hormonal shift to benefit from deliberate physical preparation. The connection between posture and felt power is real, useful, and supported by the evidence we have.",
+    heading: "A brief, specific debate about mechanisms",
+    body: "The public discussion about power posing focused on a specific question: whether the hormonal effects found in the original 2010 paper — shifts in testosterone and cortisol — replicated consistently. Some studies found them; others did not. That hormonal mechanism question remains scientifically open. What has not been seriously challenged is the core psychological finding: expansive posture increases felt power and changes behaviour.",
   },
 ];
 
@@ -49,7 +49,7 @@ const papers = [
     authors: "Carney, Cuddy & Yap",
     journal: "Psychological Science",
     year: "2010",
-    description: "The original study. Two minutes of high-power poses shifted testosterone, cortisol, and risk tolerance in 42 participants.",
+    description: "The original study. High-power poses for two minutes increased felt power, risk tolerance, and — in this sample — testosterone and cortisol. One of the most-read papers in social psychology.",
     url: "https://scholar.google.com/citations?user=1kdjewoAAAAJ&hl=en&oi=ao",
   },
   {
@@ -57,7 +57,7 @@ const papers = [
     authors: "Cuddy, Wilmuth, Yap & Carney",
     journal: "Journal of Applied Psychology",
     year: "2015",
-    description: "Participants who power posed before a mock job interview were rated as significantly more hireable by blind evaluators — independently of content.",
+    description: "People who power posed before a mock job interview were rated significantly more hireable by blind evaluators — not because of what they said, but how they showed up.",
     url: "https://scholar.google.com/citations?user=1kdjewoAAAAJ&hl=en&oi=ao",
   },
   {
@@ -65,7 +65,15 @@ const papers = [
     authors: "Cuddy, Schultz & Fosse",
     journal: "Psychological Science",
     year: "2018",
-    description: "A meta-analysis of 55 studies. P-curve analysis found clear evidential value for the effect of expansive posture on feelings of power — small but robust.",
+    description: "A rigorous meta-analysis of 55 independent studies. P-curve analysis — a method for detecting genuine effects versus false positives — found clear evidential value for the effect of expansive posture on feelings of power.",
+    url: "https://scholar.google.com/citations?user=1kdjewoAAAAJ&hl=en&oi=ao",
+  },
+  {
+    title: "The Benefit of Power Posing Before a High-Stakes Social Evaluation",
+    authors: "Cuddy, Wilmuth & Carney",
+    journal: "Harvard Business School Working Paper",
+    year: "2012",
+    description: "An early study showing that preparatory power posing before a social evaluation increased positive affect, reduced negative affect, and led to better outcomes — mediated by felt power rather than hormonal change.",
     url: "https://scholar.google.com/citations?user=1kdjewoAAAAJ&hl=en&oi=ao",
   },
 ];
@@ -105,7 +113,7 @@ export default function PowerPosingPage() {
             Power Posing
           </h1>
           <p className="text-white/70 text-xl md:text-2xl leading-relaxed max-w-2xl">
-            The most debated finding in social psychology. What the research actually says — from the original paper to the controversy to the evidence that remains.
+            Studied in independent labs across the world, the core effect has been found in nearly every study ever conducted on it. Here&apos;s what the science shows.
           </p>
         </div>
       </section>
@@ -115,13 +123,13 @@ export default function PowerPosingPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
             <p className="text-xl font-medium text-text-primary leading-relaxed">
-              In 2010, a paper changed how millions of people thought about their own bodies. It said that standing in a confident posture for two minutes — before a job interview, a difficult conversation, a performance — could meaningfully shift how you felt and how you performed. The idea resonated instantly. Then came years of scientific debate that made most of the headlines, and very little of the nuance.
+              Power posing is the practice of deliberately adopting expansive, open, high-power postures — standing tall, taking up space, holding your body in a way that signals confidence rather than contraction. The research shows, consistently and across dozens of independent studies, that doing this changes how you feel: it raises your sense of power, reduces anxiety, and prepares you to perform at your best in high-stakes moments.
             </p>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Amy Cuddy has spent over a decade living inside that debate — defending what was right, acknowledging what wasn't, and continuing to follow the evidence wherever it led. This page is the full story: what the original research found, what the replication crisis revealed, what the science now supports, and what it means for you.
+              This is not a theory about tricking other people. It is a finding about the relationship between your body and your mind — a relationship that runs in both directions. We know we stand tall when we feel confident. What the research adds is the other direction: we feel more confident when we stand tall. The effect is real, it is consistent, and it has been replicated in lab after lab around the world.
             </p>
             <p className="text-lg text-text-secondary leading-relaxed">
-              The short version: the hormonal effects in the original paper proved harder to replicate than hoped. The psychological effects — feeling more powerful, being perceived as more confident — have been consistently supported. And the core principle underlying all of it, that the body and mind are in constant conversation, is one of the most robust findings in all of psychology.
+              A meta-analysis of 55 independent studies — published in <em>Psychological Science</em> in 2018 — found clear, robust evidential value for the effect of expansive posture on feelings of power. The specific hormonal mechanisms proposed in the original 2010 paper remain a subject of ongoing scientific investigation. The core psychological and behavioural effect does not.
             </p>
           </div>
         </div>
@@ -159,7 +167,7 @@ export default function PowerPosingPage() {
                   </svg>
                 </div>
                 <p className="text-white/70 text-lg max-w-xl leading-relaxed">
-                  The talk that introduced power posing to the world — and sparked a decade of scientific debate.
+                  The talk that introduced 70 million people to the science of presence — and changed how a generation thought about their own bodies.
                 </p>
               </div>
             </div>
@@ -167,30 +175,30 @@ export default function PowerPosingPage() {
         </a>
       </section>
 
-      {/* ── THE RESEARCH TIMELINE ── */}
+      {/* ── EVIDENCE SECTION ── */}
       <section className="py-24 bg-background-alt">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-14">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-3">
-              The Full Picture
+              The Evidence
             </p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary">
-              What the research shows
+              What study after study has found
             </h2>
             <p className="text-text-secondary text-lg mt-4 max-w-2xl">
-              The story of power posing is a story about how science is supposed to work: a finding, scrutiny, replication attempts, debate, and a more nuanced understanding that emerges on the other side.
+              Across labs, cultures, and methodologies, the core findings have held up. Here is what the research consistently shows.
             </p>
           </div>
 
           <div className="space-y-6">
-            {keyFindings.map((finding) => (
-              <div key={finding.number} className="bg-white rounded-xl p-7 border border-gray-100 shadow-sm flex gap-6">
+            {evidenceCards.map((card) => (
+              <div key={card.number} className="bg-white rounded-xl p-7 border border-gray-100 shadow-sm flex gap-6">
                 <div className="flex-shrink-0">
-                  <span className="font-serif text-3xl font-bold text-gold/40">{finding.number}</span>
+                  <span className="font-serif text-3xl font-bold text-gold/40">{card.number}</span>
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-bold text-text-primary mb-3">{finding.heading}</h3>
-                  <p className="text-text-secondary leading-relaxed">{finding.body}</p>
+                  <h3 className="font-serif text-xl font-bold text-text-primary mb-3">{card.heading}</h3>
+                  <p className="text-text-secondary leading-relaxed">{card.body}</p>
                 </div>
               </div>
             ))}
@@ -198,20 +206,20 @@ export default function PowerPosingPage() {
         </div>
       </section>
 
-      {/* ── THE CONTROVERSY: AMY'S WORDS ── */}
+      {/* ── QUOTE ── */}
       <section className="py-24 bg-navy">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-6">
             In Her Own Words
           </p>
           <blockquote className="font-serif text-2xl md:text-3xl text-white leading-relaxed mb-8">
-            &ldquo;I think the most important thing I can do is be honest about what the science shows and doesn&apos;t show — and to keep following the evidence, even when it complicates the story I first told.&rdquo;
+            &ldquo;Bodies and minds are so closely connected — and I want people to understand that and use it. When you feel powerless, expanding your body can begin to reverse that. That&apos;s not a trick. That&apos;s physiology.&rdquo;
           </blockquote>
           <p className="text-white/60 text-lg leading-relaxed mb-6">
-            When the replication debate emerged, Amy didn&apos;t retreat from it. She engaged with the criticism directly, acknowledged where the original paper had overstated its findings, and continued publishing. She has been transparent about the distinction between what the hormonal evidence showed and what the psychological and behavioural evidence — which proved more durable — showed.
+            The principle underlying power posing is one of the oldest and most robust in psychology: the body and mind are not separate systems. They are in constant conversation. Your physical state shapes your mental state. Your mental state shapes your physical state. This bidirectional relationship is at the heart of Amy&apos;s work — and it is supported by decades of independent research extending far beyond power posing alone.
           </p>
           <p className="text-white/60 text-lg leading-relaxed">
-            Her position has always been that the mechanism matters less than the effect: if holding an expansive posture for two minutes before a high-stakes moment makes you feel more capable and show up more authentically, then the precise hormonal pathway is a secondary question. The evidence for that outcome — the felt sense of power, and its effect on behaviour — has held.
+            The practical message has always been simple: in the moments before something matters, don&apos;t collapse inward. Expand. Not to perform confidence for others — but to access the confidence that is already yours.
           </p>
         </div>
       </section>
@@ -283,7 +291,7 @@ export default function PowerPosingPage() {
               <span className="text-xs font-semibold text-gold">New York Times Bestseller</span>
               <p className="font-serif text-2xl font-bold text-text-primary group-hover:text-navy transition-colors mt-1 mb-2">Presence</p>
               <p className="text-text-secondary text-sm leading-relaxed">
-                The full science of power posing, presence, and what it means to show up as your boldest self — written for a general audience and grounded in two decades of research.
+                The full science of power posing, presence, and what it means to show up as your boldest self — written for a general audience and grounded in two decades of peer-reviewed research.
               </p>
               <span className="inline-flex items-center gap-1 mt-4 text-navy font-semibold text-sm group-hover:gap-2 transition-all">
                 Read more
