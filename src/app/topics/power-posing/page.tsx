@@ -76,6 +76,30 @@ const papers = [
     description: "An early study showing that preparatory power posing before a social evaluation increased positive affect, reduced negative affect, and led to better outcomes — mediated by felt power rather than hormonal change.",
     url: "https://scholar.google.com/citations?user=1kdjewoAAAAJ&hl=en&oi=ao",
   },
+  {
+    title: "Assessing the Robustness of Power Posing: No Effect on Hormones and Risk Tolerance in a Large Sample",
+    authors: "Ranehill, Dreber, Johannesson, Leiberg, Sul & Weber",
+    journal: "Psychological Science",
+    year: "2015",
+    description: "Often cited as a \"failed replication\" — but this study of 200 participants did replicate the core psychological finding: self-reported feelings of power increased significantly in the high-power pose condition. The null results were specific to hormonal and risk-tolerance outcomes.",
+    url: "https://scholar.google.com/citations?user=1kdjewoAAAAJ&hl=en&oi=ao",
+  },
+  {
+    title: "A Bayesian Model-Averaged Meta-Analysis of the Power Pose Effect: The Case of Felt Power",
+    authors: "Gronau, van Erp, Heck, Cesario, Jonas & Wagenmakers",
+    journal: "Comprehensive Results in Social Psychology",
+    year: "2017",
+    description: "A Bayesian meta-analysis co-authored by prominent sceptics of power posing research, including Cesario and Wagenmakers. Their conclusion: \"very strong evidence for an effect of power posing on felt power.\" One of the most compelling endorsements of the core finding, given who authored it.",
+    url: "https://www.tandfonline.com/doi/abs/10.1080/23743603.2017.1326760",
+  },
+  {
+    title: "Powerful and Confident Children through Expansive Body Postures? A Preregistered Study of Fourth Graders",
+    authors: "Körner, Köhler & Schütz",
+    journal: "School Psychology International",
+    year: "2020",
+    description: "A preregistered study of 108 German fourth-graders found that high-power poses improved global self-esteem, school self-esteem, positive feelings, and — strikingly — children's perceptions of their relationships with their teachers. Preregistration rules out post-hoc flexibility in the analysis.",
+    url: "https://journals.sagepub.com/doi/10.1177/0143034320921061",
+  },
 ];
 
 const otherTopics = topics.filter((t) => t.slug !== "power-posing");
@@ -233,9 +257,9 @@ export default function PowerPosingPage() {
                 body: "In a controlled mock interview study, participants who power posed in preparation were rated significantly more hireable by evaluators who watched video recordings blind to condition. The content of answers was equivalent across groups. What differed was presence — how candidates carried themselves, held eye contact, and projected confidence.",
               },
               {
-                label: "German secondary school students",
-                detail: "Independent replication · Educational setting",
-                body: "A study with secondary school students in Germany found that students who adopted expansive high-power postures for two minutes before oral examination components showed significantly reduced anxiety and were rated more positively by their examiners. The effect was observed across multiple subject areas and age groups, and the authors noted it was consistent with the broader embodied cognition literature.",
+                label: "German fourth-graders: self-esteem and teacher relationships",
+                detail: "Körner, Köhler & Schütz · School Psychology International · 2020 · Preregistered",
+                body: "In a preregistered study of 108 fourth-grade children in Germany, those assigned to high-power poses showed significant improvements in self-reported global self-esteem, school self-esteem, and positive feelings — and crucially, reported better perceptions of their relationships with their teachers compared to controls. The preregistered design rules out many common criticisms of flexibility in analysis, and the breadth of outcomes — spanning self-esteem, emotion, and social relationships — points to the real-world significance of the effect.",
               },
               {
                 label: "Negotiation outcomes",
@@ -256,6 +280,21 @@ export default function PowerPosingPage() {
                 label: "The 55-study meta-analysis",
                 detail: "Cuddy, Schultz & Fosse · Psychological Science · 2018",
                 body: "The most comprehensive analysis of the power posing literature to date examined 55 independent studies using p-curve analysis — a method specifically designed to identify genuine effects and filter out false positives. The result was unambiguous: clear evidential value for the effect of expansive posture on feelings of power. The effect is real and consistent across the literature.",
+              },
+              {
+                label: "The most-cited \"failed replication\" still replicated felt power",
+                detail: "Ranehill, Dreber, Johannesson et al. · Psychological Science · 2015",
+                body: "The Ranehill et al. study is frequently cited as evidence against power posing — but a closer reading tells a different story. In their sample of 200 participants, the researchers did find a reliable, significant increase in self-reported feelings of power among those who adopted expansive postures. Their null findings were specific to hormonal and risk-tolerance outcomes. The felt power effect — the core of Amy's practical claim — replicated. This is rarely acknowledged in popular coverage of the debate.",
+              },
+              {
+                label: "Even the sceptics' p-curve showed the felt power effect",
+                detail: "Data Colada · Post #37 · Simonsohn, Nelson & Simmons",
+                body: "Data Colada — one of the most influential methods blogs in psychology, known for rigorous critique of questionable research practices — conducted their own p-curve analysis of power posing studies. For studies using manipulation checks that measured self-reported feelings of power, they found a directionally right-skewed p-curve, the signature of a genuine effect in the data. Even in a critical analysis by researchers not sympathetic to the broader claims, the felt power effect showed up.",
+              },
+              {
+                label: "Bayesian meta-analysis: very strong evidence for felt power",
+                detail: "Gronau, van Erp, Heck, Cesario, Jonas & Wagenmakers · Comprehensive Results in Social Psychology · 2017",
+                body: "In a Bayesian model-averaged meta-analysis of six pre-registered studies — co-authored by Joseph Cesario and E-J Wagenmakers, both prominent voices of scepticism toward power posing — the authors concluded there was \"very strong evidence for an effect of power posing on felt power.\" This is a significant finding: researchers who were sceptical of the broader power posing claims, using Bayesian methods specifically chosen for their sensitivity to weak evidence, found the felt power effect robust enough to describe with the strongest available category of evidential support.",
               },
             ].map((study) => (
               <div key={study.label} className="py-8 flex flex-col md:flex-row gap-4 md:gap-8">
