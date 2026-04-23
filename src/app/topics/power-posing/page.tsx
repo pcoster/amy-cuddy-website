@@ -167,6 +167,24 @@ export default function PowerPosingPage() {
         </div>
       </section>
 
+      {/* ── QUOTE ── */}
+      <section className="py-24 bg-navy">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-6">
+            In Her Own Words
+          </p>
+          <blockquote className="font-serif text-2xl md:text-3xl text-white leading-relaxed mb-8">
+            &ldquo;Bodies and minds are so closely connected — and I want people to understand that and use it. When you feel powerless, expanding your body can begin to reverse that. That&apos;s not a trick. That&apos;s physiology.&rdquo;
+          </blockquote>
+          <p className="text-white/60 text-lg leading-relaxed mb-6">
+            The principle underlying power posing is one of the oldest and most robust in psychology: the body and mind are not separate systems. They are in constant conversation. Your physical state shapes your mental state. Your mental state shapes your physical state. This bidirectional relationship is at the heart of Amy&apos;s work — and it is supported by decades of independent research extending far beyond power posing alone.
+          </p>
+          <p className="text-white/60 text-lg leading-relaxed">
+            The practical message has always been simple: in the moments before something matters, don&apos;t collapse inward. Expand. Not to perform confidence for others — but to access the confidence that is already yours.
+          </p>
+        </div>
+      </section>
+
       {/* ── TED TALK ── */}
       <section className="bg-[#0D0D0D] py-0">
         <a
@@ -385,24 +403,6 @@ export default function PowerPosingPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── QUOTE ── */}
-      <section className="py-24 bg-navy">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-6">
-            In Her Own Words
-          </p>
-          <blockquote className="font-serif text-2xl md:text-3xl text-white leading-relaxed mb-8">
-            &ldquo;Bodies and minds are so closely connected — and I want people to understand that and use it. When you feel powerless, expanding your body can begin to reverse that. That&apos;s not a trick. That&apos;s physiology.&rdquo;
-          </blockquote>
-          <p className="text-white/60 text-lg leading-relaxed mb-6">
-            The principle underlying power posing is one of the oldest and most robust in psychology: the body and mind are not separate systems. They are in constant conversation. Your physical state shapes your mental state. Your mental state shapes your physical state. This bidirectional relationship is at the heart of Amy&apos;s work — and it is supported by decades of independent research extending far beyond power posing alone.
-          </p>
-          <p className="text-white/60 text-lg leading-relaxed">
-            The practical message has always been simple: in the moments before something matters, don&apos;t collapse inward. Expand. Not to perform confidence for others — but to access the confidence that is already yours.
-          </p>
         </div>
       </section>
 
