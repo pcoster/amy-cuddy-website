@@ -61,7 +61,7 @@ Drawing on cutting-edge science, inspiring personal stories, and practical advic
       "The mind-body connection",
     ],
     awards: [
-      "New York Times Bestseller (26+ weeks)",
+      "New York Times Bestseller",
       "Wall Street Journal Bestseller",
       "Translated into 30+ languages",
       "Amazon Best Book of 2015",

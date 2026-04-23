@@ -101,7 +101,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-text-secondary text-lg leading-relaxed">
-              My book <em>Presence</em> spent 26 weeks on the New York Times bestseller list and has
+              My book <em>Presence</em> was a New York Times bestseller and has
               been translated into more than 30 languages. My next book, <em>Bullied</em>, comes from
               the same place — a deep belief that understanding power and belonging can change lives.
               And my research, published in leading academic journals, keeps asking the same question
@@ -149,7 +149,7 @@ export default function AboutPage() {
               { value: "70M+", label: "TED Talk views" },
               { value: "#3", label: "Most-watched TED Talk ever" },
               { value: "30+", label: "Languages — Presence" },
-              { value: "26 weeks", label: "New York Times bestseller" },
+              { value: "NYT", label: "Bestseller — Presence" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="font-serif text-4xl md:text-5xl font-bold text-white mb-2">{stat.value}</p>

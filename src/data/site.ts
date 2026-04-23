@@ -18,7 +18,7 @@ Her 2012 TED Talk, "Your Body Language May Shape Who You Are," became the third 
 
 Amy's research spans nonverbal behavior, power and dominance, prejudice and stereotyping, and the psychological and physiological effects of social environments. She has published extensively in top academic journals, and her work has been featured in The New York Times, The Wall Street Journal, The Economist, Forbes, TIME, and on NPR, CNN, and BBC.
 
-Her bestselling book, *Presence: Bringing Your Boldest Self to Your Biggest Challenges* (2015), spent over 26 weeks on the New York Times bestseller list and has been translated into more than 30 languages. The book weaves together cutting-edge science, personal narrative, and practical tools to help readers harness the power of presence in high-stakes moments.
+Her bestselling book, *Presence: Bringing Your Boldest Self to Your Biggest Challenges* (2015), was a New York Times bestseller and has been translated into more than 30 languages. The book weaves together cutting-edge science, personal narrative, and practical tools to help readers harness the power of presence in high-stakes moments.
 
 A magna cum laude graduate of the University of Colorado at Boulder, Amy earned her Ph.D. in Psychology from Princeton University. Before joining Harvard Business School, she was on the faculty at Northwestern University's Kellogg School of Management.
 
