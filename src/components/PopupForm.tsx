@@ -7,26 +7,21 @@ const DELAY_MS = 4000;
 
 export default function PopupForm() {
   const [visible, setVisible] = useState(false);
+  const [shouldMount, setShouldMount] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Decide whether to mount at all (skip if already seen this session)
   useEffect(() => {
-    // Only show once per session
     if (sessionStorage.getItem(STORAGE_KEY)) return;
-
-    const timer = setTimeout(() => {
-      setVisible(true);
-      sessionStorage.setItem(STORAGE_KEY, "1");
-    }, DELAY_MS);
-
-    return () => clearTimeout(timer);
+    setShouldMount(true);
   }, []);
 
+  // Once mounted, inject the Kit script immediately so it preloads
   useEffect(() => {
-    if (!visible) return;
+    if (!shouldMount) return;
     const container = containerRef.current;
     if (!container || container.querySelector("script")) return;
 
-    // Inject Kit branding-hide CSS (reuses the same id as NewsletterForm)
     if (!document.getElementById("kit-hide-branding")) {
       const style = document.createElement("style");
       style.id = "kit-hide-branding";
@@ -45,16 +40,31 @@ export default function PopupForm() {
     script.src = "https://amy-cuddy.kit.com/8d3480defa/index.js";
     container.appendChild(script);
 
-    return () => { script.remove(); };
-  }, [visible]);
+    // Show the modal after delay — form will already be rendered by then
+    const timer = setTimeout(() => {
+      setVisible(true);
+      sessionStorage.setItem(STORAGE_KEY, "1");
+    }, DELAY_MS);
 
-  if (!visible) return null;
+    return () => {
+      clearTimeout(timer);
+      script.remove();
+    };
+  }, [shouldMount]);
+
+  if (!shouldMount) return null;
 
   return (
+    // Always in the DOM once mounted; CSS controls visibility
     <div
-      className="fixed inset-0 z-[200] flex items-center justify-center p-4"
+      className="fixed inset-0 z-[200] flex items-center justify-center p-4 transition-opacity duration-500"
+      style={{
+        opacity: visible ? 1 : 0,
+        pointerEvents: visible ? "auto" : "none",
+      }}
       role="dialog"
       aria-modal="true"
+      aria-hidden={!visible}
     >
       {/* Backdrop */}
       <div
@@ -63,7 +73,10 @@ export default function PopupForm() {
       />
 
       {/* Panel */}
-      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-in fade-in zoom-in-95 duration-300">
+      <div
+        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden transition-transform duration-500"
+        style={{ transform: visible ? "scale(1)" : "scale(0.95)" }}
+      >
         {/* Close button */}
         <button
           onClick={() => setVisible(false)}
@@ -75,7 +88,7 @@ export default function PopupForm() {
           </svg>
         </button>
 
-        {/* Kit form renders here */}
+        {/* Kit form — preloaded invisibly, ready when modal opens */}
         <div ref={containerRef} className="p-2" />
       </div>
     </div>
