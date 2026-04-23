@@ -347,9 +347,12 @@ export default function PowerPosingPage() {
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-3">
               Setting the Record Straight
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">
               What you may have heard — and what the evidence actually shows
             </h2>
+            <p className="text-white/60 text-lg leading-relaxed max-w-2xl">
+              Power posing generated more media coverage than almost any other finding in social psychology — including years of coverage that was reductive, inaccurate, or took contested claims at face value. If you've come away with the impression that the science was straightforwardly discredited, you absorbed a story the data doesn't support. Here is a more careful read.
+            </p>
           </div>
 
           <div className="space-y-0 divide-y divide-white/10 border-t border-white/10">
