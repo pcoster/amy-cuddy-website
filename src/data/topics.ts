@@ -49,7 +49,7 @@ export const topics: Topic[] = [
       },
     ],
     relatedLinks: [
-      { label: "Watch the TED Talk", href: "https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are", external: true, badge: "70M+ views" },
+      { label: "Watch the TED Talk", href: "https://www.youtube.com/watch?v=Ks-_Mh1QhMc", external: true, badge: "70M+ views" },
       { label: "Read Presence", href: "/books/presence", badge: "NYT Bestseller" },
       { label: "Research Overview", href: "/research" },
     ],
@@ -83,7 +83,7 @@ export const topics: Topic[] = [
       },
     ],
     relatedLinks: [
-      { label: "Watch the TED Talk", href: "https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are", external: true, badge: "70M+ views" },
+      { label: "Watch the TED Talk", href: "https://www.youtube.com/watch?v=Ks-_Mh1QhMc", external: true, badge: "70M+ views" },
       { label: "Read Presence", href: "/books", badge: "NYT Bestseller" },
       { label: "Research Overview", href: "/research" },
       { label: "Book a Keynote", href: "/speaking" },
@@ -119,7 +119,7 @@ export const topics: Topic[] = [
     ],
     relatedLinks: [
       { label: "Read Presence", href: "/books", badge: "NYT Bestseller" },
-      { label: "Watch the TED Talk", href: "https://www.ted.com/talks/amy_cuddy_your_body_language_may_shape_who_you_are", external: true },
+      { label: "Watch the TED Talk", href: "https://www.youtube.com/watch?v=Ks-_Mh1QhMc", external: true },
       { label: "Read Her Writing", href: "/writing" },
       { label: "Book a Keynote", href: "/speaking" },
     ],
