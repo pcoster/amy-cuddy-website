@@ -353,6 +353,15 @@ export default function PowerPosingPage() {
             <p className="text-white/60 text-lg leading-relaxed max-w-2xl">
               Power posing generated more media coverage than almost any other finding in social psychology — including years of coverage that was reductive, inaccurate, or took contested claims at face value. If you've come away with the impression that the science was straightforwardly discredited, you absorbed a story the data doesn't support. Here is a more careful read.
             </p>
+            <Link
+              href="/topics/power-posing/state-of-the-science"
+              className="inline-flex items-center gap-2 mt-6 text-gold font-semibold text-sm hover:gap-3 transition-all group"
+            >
+              Read Amy&apos;s full account: The State of the Science
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+              </svg>
+            </Link>
           </div>
 
           <div className="space-y-0 divide-y divide-white/10 border-t border-white/10">
