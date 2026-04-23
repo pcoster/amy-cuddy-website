@@ -374,7 +374,7 @@ export default function PowerPosingPage() {
                 truth: `This concern was raised when one analysis found the felt power effect was weaker in participants who had never heard of Amy's TED Talk. But the Körner, Köhler & Schütz (2020) preregistered study with German fourth-graders found significant improvements in global self-esteem, school self-esteem, positive feelings, and relationships with teachers — in children who were almost certainly unaware of power posing research. Effects observed in primary school children on real-world outcomes like self-esteem and social relationships are not plausibly explained by demand characteristics or prior knowledge of the hypothesis.`,
               },
               {
-                myth: `"Even the critics who analysed it said it was fake."`,
+                myth: `"The p-curve analysis showed power posing is a fake effect."`,
                 truth: `Data Colada — one of the most rigorous and respected critical voices in psychological methods — conducted their own p-curve analysis of power posing studies. For studies measuring self-reported feelings of power, their analysis showed a directionally right-skewed p-curve: the statistical signature of a genuine effect. Even in a critical analysis by researchers not predisposed toward the broader claims, the felt power effect showed up in the data. That finding has been consistently overlooked in popular coverage of their post.`,
               },
               {
